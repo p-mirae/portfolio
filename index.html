@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex">
+        <title>白 未来のポートフォリオ</title>
+        <meta name="description" content="白 未来のポートフォリオWebサイト">
+
+        <!-- destyle.css -->
+        <link rel="stylesheet" href="css/destyle.css">
+
+        <!-- Google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+        <!-- Adobe font -->
+        <link rel="stylesheet" href="https://use.typekit.net/jvz8nfo.css">
+        <script src="js/adobefonts.js"></script>
+        <link rel="stylesheet" href="https://use.typekit.net/knu8bsc.css">
+
+        <!-- AnimateCSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+        <link rel="shortcut icon" href="images/favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <meta name="apple-mobile-web-app-title" content="白未来のポートフォリオ">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+
+        <!-- style.css -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <!-- ***********************************  ヘッダー *********************************** -->
+        <header>
+            <div class="header_wrapper container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="M">
+                    </a>
+                </div>
+
+                <!-- ドロワーボタン -->
+                <button id="drawerButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div id="header_menu">
+                    <!-- 見えないメニュー -->
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="webdesign.html">WEB DESIGN</a></li>
+                            <li><a href="dtp.html">DTP</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="#CONTACT">CONTACT</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- ************************************************************************************ -->
+        
+        <!-- **************************************  メイン ************************************** -->
+        <main>
+            <!-- :::::::::::::::::::::::::::: メインビジュアル ::::::::::::::::::::::::::::  -->
+            <section id="mv" class="container">
+                <!------------------ メインビジュアルSVG ------------------->
+                <h1>
+                    <svg id="mv_portfolio" data-name="mv_portfolio" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 747.36 118.24">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #33334d;
+                                }
+                            </style>
+                        </defs>
+                        <g id="portfolio">
+                            <g id="eye">
+                                <g id="portfolio-2" data-name="portfolio">
+                                    <path class="cls" d="M64.7,35c-2.85-4.16-6.95-7.35-12.29-9.57-5.34-2.22-11.86-3.33-19.55-3.33H0v93.69h18.06v-25.33l11.41-3.32c9.41-2.71,17.02-5.77,22.81-9.17,5.79-3.39,10.02-7.35,12.7-11.88,2.67-4.53,4.01-9.82,4.01-15.89s-1.43-11.04-4.28-15.21ZM44.74,62.23c-3.67,3.03-9.66,5.68-17.99,7.94l-8.69,2.45v-33.96h14.8c5.61,0,9.91,1.06,12.9,3.19,2.99,2.13,4.48,5.14,4.48,9.03,0,4.53-1.83,8.31-5.5,11.34Z"/>
+                                    <path class="cls" d="M81.47,88.84c-2.44-6.02-3.67-12.65-3.67-19.89s1.22-13.87,3.67-19.89c2.44-6.02,5.91-11.22,10.39-15.62,4.48-4.39,9.78-7.78,15.89-10.18,6.11-2.4,12.88-3.6,20.3-3.6s14.19,1.2,20.3,3.6c6.11,2.4,11.41,5.79,15.89,10.18,4.48,4.39,7.94,9.6,10.39,15.62,2.44,6.02,3.67,12.65,3.67,19.89s-1.22,13.87-3.67,19.89c-2.44,6.02-5.91,11.23-10.39,15.62-4.48,4.39-9.78,7.79-15.89,10.18s-12.88,3.6-20.3,3.6-14.19-1.2-20.3-3.6-11.41-5.79-15.89-10.18c-4.48-4.39-7.94-9.59-10.39-15.62ZM159.55,68.95c0-6.33-1.34-11.88-4.01-16.63-2.67-4.75-6.36-8.49-11.07-11.2-4.71-2.72-10.18-4.07-16.43-4.07s-11.61,1.36-16.36,4.07c-4.75,2.72-8.47,6.45-11.13,11.2-2.67,4.75-4.01,10.3-4.01,16.63s1.33,11.77,4.01,16.57c2.67,4.8,6.38,8.55,11.13,11.27,4.75,2.72,10.21,4.07,16.36,4.07s11.72-1.36,16.43-4.07c4.71-2.72,8.4-6.47,11.07-11.27,2.67-4.8,4.01-10.32,4.01-16.57Z"/>
+                                    <path class="cls" d="M245.09,115.8h19.83l-18.03-42.81c2.94-1.8,5.49-3.83,7.58-6.14,4.8-5.3,7.2-11.65,7.2-19.08,0-8.15-2.69-14.46-8.08-18.94-5.39-4.48-13.06-6.72-23.02-6.72h-36.93v93.69h18.06v-30.57l19.17-5.77,14.23,36.34ZM211.69,68.15v-29.48h17.24c4.44,0,7.88.86,10.32,2.58,2.44,1.72,3.67,4.12,3.67,7.2,0,2.72-.61,5.07-1.83,7.06-1.22,1.99-3.24,3.73-6.04,5.23-2.81,1.49-6.52,2.88-11.13,4.14l-12.22,3.27Z"/>
+                                    <path class="cls" d="M296.96,38.94h-26.07v-16.84h70.2v16.84h-26.07v76.85h-18.06V38.94Z"/>
+                                    <path class="cls" d="M371.91,38.94v17.52h25.8v16.84h-25.8v42.5h-18.06V22.11h61.24v16.84h-43.18Z"/>
+                                    <path class="cls" d="M427.31,88.84c-2.44-6.02-3.67-12.65-3.67-19.89s1.22-13.87,3.67-19.89c2.44-6.02,5.91-11.22,10.39-15.62,4.48-4.39,9.78-7.78,15.89-10.18,6.11-2.4,12.88-3.6,20.3-3.6s14.19,1.2,20.3,3.6c6.11,2.4,11.41,5.79,15.89,10.18,4.48,4.39,7.94,9.6,10.39,15.62,2.44,6.02,3.67,12.65,3.67,19.89s-1.22,13.87-3.67,19.89c-2.44,6.02-5.91,11.23-10.39,15.62-4.48,4.39-9.78,7.79-15.89,10.18s-12.88,3.6-20.3,3.6-14.19-1.2-20.3-3.6-11.41-5.79-15.89-10.18c-4.48-4.39-7.94-9.59-10.39-15.62ZM505.39,68.95c0-6.33-1.34-11.88-4.01-16.63-2.67-4.75-6.36-8.49-11.07-11.2-4.71-2.72-10.18-4.07-16.43-4.07s-11.61,1.36-16.36,4.07c-4.75,2.72-8.47,6.45-11.13,11.2-2.67,4.75-4.01,10.3-4.01,16.63s1.33,11.77,4.01,16.57c2.67,4.8,6.38,8.55,11.13,11.27,4.75,2.72,10.21,4.07,16.36,4.07s11.72-1.36,16.43-4.07c4.71-2.72,8.4-6.47,11.07-11.27,2.67-4.8,4.01-10.32,4.01-16.57Z"/>
+                                    <path class="cls" d="M600.71,98.96v16.84h-61.24V22.11h18.06v76.85h43.18Z"/>
+                                    <path class="cls" d="M613.47,22.11h18.06v93.69h-18.06V22.11Z"/>
+                                    <path class="cls" d="M650.54,88.84c-2.44-6.02-3.67-12.65-3.67-19.89s1.22-13.87,3.67-19.89c2.44-6.02,5.91-11.22,10.39-15.62,4.48-4.39,9.78-7.78,15.89-10.18,6.11-2.4,12.88-3.6,20.3-3.6s14.19,1.2,20.3,3.6c6.11,2.4,11.41,5.79,15.89,10.18,4.48,4.39,7.94,9.6,10.39,15.62,2.44,6.02,3.67,12.65,3.67,19.89s-1.22,13.87-3.67,19.89c-2.44,6.02-5.91,11.23-10.39,15.62-4.48,4.39-9.78,7.79-15.89,10.18s-12.88,3.6-20.3,3.6-14.19-1.2-20.3-3.6-11.41-5.79-15.89-10.18c-4.48-4.39-7.94-9.59-10.39-15.62ZM728.62,68.95c0-6.33-1.34-11.88-4.01-16.63-2.67-4.75-6.36-8.49-11.07-11.2-4.71-2.72-10.18-4.07-16.43-4.07s-11.61,1.36-16.36,4.07c-4.75,2.72-8.47,6.45-11.13,11.2-2.67,4.75-4.01,10.3-4.01,16.63s1.33,11.77,4.01,16.57c2.67,4.8,6.38,8.55,11.13,11.27,4.75,2.72,10.21,4.07,16.36,4.07s11.72-1.36,16.43-4.07c4.71-2.72,8.4-6.47,11.07-11.27,2.67-4.8,4.01-10.32,4.01-16.57Z"/>
+                                </g>
+                                <path class="cls" d="M460.2,8.5c0,4.69-3.81,8.5-8.5,8.5s-8.5-3.81-8.5-8.5,3.81-8.5,8.5-8.5,8.5,3.81,8.5,8.5ZM495.7,0c-4.69,0-8.5,3.81-8.5,8.5s3.81,8.5,8.5,8.5,8.5-3.81,8.5-8.5-3.81-8.5-8.5-8.5Z"/>
+                            </g>
+                        </g>
+                    </svg>
+                </h1>
+                <!--------------------------------------------------------->
+                <p id="mv_name">
+                    <svg id="name_text" data-name="name_text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 771.15 122.53" width="771.1500244140625" height="122.52999877929688" class="name_animation">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #33334d;
+                                    stroke: #33334d;
+                                    stroke-width: 0.1px;
+                                }
+                            </style>
+                        </defs>
+                        <g id="name" transform="translate(80, 0)" >
+                            <g id="name-2" data-name="name">
+                                <path class="cls-1 svg-elem-1" d="M24.51,127.3c0-7.5,4.97-17.35,13.22-31.42-2.78-1.26-10.36-4.8-10.36-9.94,0-.59.08-1.18.34-1.85,1.18,5.05,6.65,7.07,11.29,9.43,19.45-30.91,43.96-58.7,49.69-58.7,2.36,0,4.88,2.44,4.88,3.54,0,.34-.25.59-.76.59-2.44,0-26.87,23.67-47,55.92,32.76,2.86,91.3-34.53,91.3-66.62,0-14.32-12.38-24-32.34-24-3.11,0-6.4.25-9.85.76C63.67,9.56,29.14,26.99,9.18,48.22c-1.18,1.43-4.97,4.97-4.97,6.91,0,.59.25,1.01,1.01,1.18,1.1.76-.25,1.01-1.6,1.01-.76,0-1.43-.08-1.6-.25-1.43-.5-2.02-1.43-2.02-2.61,0-4.72,10.27-13.73,11.87-15.33C33.77,18.65,72.51,1.81,100.73,1.47c21.81-.08,43.12,8.68,43.12,29.65,0,28.8-53.31,67.12-91.04,67.12-2.95,0-5.81-.17-8.51-.59-5.73,9.94-11.79,19.54-14.4,30.66-.42,1.52-.68,2.7-.68,3.62,0,4.46,4.38,2.53,3.2,3.96-5.98-.17-7.92-3.87-7.92-8.59Z"></path>
+                                <path class="cls-1 svg-elem-2" d="M125.05,95.72c-1.35-.84-1.52-2.44-1.52-3.79,0-7.75,12.46-19.71,22.15-19.54,2.36,0,4.97.59,6.57,1.77-.25-1.43.51-1.77,1.43-1.77,1.09.08,2.11.51,3.03,1.1.59.42.84,1.01.92,1.68.25,3.79,1.85,9.52,3.62,12.38,1.26,2.19,3.28,3.2,5.98,3.2,6.74,0,15.75-5.64,21.31-9.94.67-.51,1.43-1.18,2.19-1.77.17-.08.25-.17.42-.08.25.17,0,.34,0,.42-.42,1.01-1.1,1.85-1.77,2.61-1.52,1.77-3.45,3.28-5.39,4.63-4.88,3.12-11.12,6.06-16,6.06-3.79,0-7.07-1.35-10.36-4.13-2.44-2.1-4.04-6.91-5.14-10.7-6.23,7.66-10.36,11.79-15.5,16.17-1.26,1.01-2.69,1.85-4.13,2.53-1.09.5-2.11.76-3.11.76-1.6,0-3.2-.59-4.72-1.6ZM142.82,84.85c2.86-2.53,5.47-5.64,8.17-8.59-.68-.84-1.52-1.52-3.03-1.43-6.99.25-19.03,13.39-19.03,18.36,0,1.26,1.01,1.1,1.6.84,4.97-2.02,9.1-6.32,12.3-9.18Z"></path>
+                                <path class="cls-1 svg-elem-3" d="M184.75,91.17c0-4.38,2.36-9.52,8.17-14.74,3.03-2.36,7.16-4.8,11.29-4.72,2.44.08,5.64,1.43,5.64,3.96,0,.67-.17,1.43-.67,2.19-2.53,3.96-10.87,8.84-18.19,11.12-.59,1.43-.93,3.03-.93,4.63,0,3.87,2.19,7.33,8,6.91,6.91-.34,19.62-8.67,33.35-17.1.68-.42,1.94-.84,1.26-.17-1.6,1.6-23.67,19.71-35.54,19.45-7.07-.42-12.38-5.05-12.38-11.54ZM204.54,78.62c1.01-.93,1.94-2.53,1.94-3.62,0-.59-.34-.93-1.01-.93s-1.68.25-3.12,1.1c-4.63,2.36-7.83,6.4-10.36,11.03,4.38-2.02,8.93-4.13,12.55-7.58Z"></path>
+                                <path class="cls-1 svg-elem-4" d="M223.32,98.92c-.17-2.78.34-5.39,1.43-8.59,2.19-5.56,5.14-10.7,8.34-15.67,7.33-11.37,15.41-21.73,25.18-31.16,3.88-3.79,7.24-6.57,11.96-9.18.84-.51,1.77-.76,2.69-.51,1.18.25.68,1.68-.59,3.62-1.85,2.95-4.3,5.39-6.65,7.58-.93.76-2.02,1.6-2.95,2.28-.93.67-1.77.5-3.03-.25-14.23,14.65-25.1,31.16-30.32,47.25-.93,2.78-.84,4.46,2.19,1.18,5.56-5.73,21.81-22.32,30.32-22.32,1.68,0,3.11.17,4.46,1.1.25.08.51.34.42.59-.08.34-.34.42-.59.5-1.35.42-2.69.76-4.04,1.18-5.81,1.77-10.44,5.64-15.41,9.1,1.35,4.21,5.73,12.72,12.13,12.72,5.9,0,15.41-5.56,20.97-9.85.68-.51,1.43-1.18,2.19-1.77.17-.08.25-.17.42-.08.25.17,0,.34,0,.42-.42,1.01-1.09,1.85-1.77,2.61-1.52,1.77-3.45,3.28-5.39,4.63-4.88,3.12-11.12,6.06-16,6.06-4.63,0-8.59-1.94-12.04-5.9-1.52-1.68-2.95-3.54-4.04-5.56-3.2,2.78-5.98,5.98-8.93,9.1-1.26,1.35-2.53,2.61-4.04,3.71-1.85,1.35-6.74,0-6.91-2.78Z"></path>
+                                <path class="cls-1 svg-elem-5" d="M311.23,108.52c11.29-20.3,23.58-39.92,36.13-59.54,28.8-44.64,25.27-41.77,30.66-40.09,1.1.5,1.35.93,1.26,1.94-1.09,4.38-2.78,7.83-4.04,11.88-4.55,12.97-8.67,25.69-12.29,38.83-2.44,9.35-4.8,20.72-1.6,27.62.68,1.26,1.43,3.03,2.95,2.86,8.34-2.61,17.85-13.31,21.14-16.42,24.42-26.78,37.82-45.9,63.59-67.04,5.39-4.38,9.85-7.92,12.97-8.51,8.84-.59,7.58,5.47,7.16,8-3.2,18.61-24.59,58.45-27.79,65.86-5.64,11.54-10.44,23.41-15.92,35.04-14.4,32.34,5.22-22.91,7.07-27.37,3.2-8.76,6.91-17.35,10.95-25.77,3.79-7.58,24-49.69,19.79-52.05-38.66,27.54-62.41,67.97-84.81,85.06-11.96,10.44-24.17,6.4-23.92-10.11,1.18-18.44,9.52-36.55,14.4-54.15-19.96,30.49-40.09,61.14-58.03,92.9-.08,1.35,3.62-3.87,4.72-2.78-5.73,8.25-8.76,16.51-13.14,11.54,1.18-6.49,5.64-11.88,8.76-17.69Z"></path>
+                                <path class="cls-1 svg-elem-6" d="M458.01,90.83c.76-4.21,2.61-7.92,5.39-11.28,1.09-1.43,4.71-1.1,5.81-.08.5.42.5.84.25,1.35-.51.67-.93,1.35-1.35,1.94-1.77,2.61-3.2,5.31-4.21,8.25-.42,1.26-.67,2.61-.5,3.96.25,2.02,1.18,2.53,3.2,2.44,4.46-.25,22.32-9.27,30.24-14.32.51-.34,1.01-.76,1.52-1.01.34-.25.51-.84,1.1-.59-.25.25-.42.59-.76.84-1.68,1.68-3.62,2.95-5.56,4.3-6.06,3.87-12.38,8-18.78,11.12-2.36,1.1-4.71,2.19-7.33,2.11-4.04-.08-10.11-2.7-9.01-9.01ZM468.03,71.97c1.68-2.86,3.79-8.25,4.55-12.38.25-1.01.5-1.43,1.6-1.18,1.52.34,3.37,1.94,3.11,4.29-.17,2.27-4.55,8-8,9.85-1.26.59-1.94.59-1.26-.59Z"></path>
+                                <path class="cls-1 svg-elem-7" d="M490.34,95.21c0-.25,0-.59.08-.84,1.01-6.15,5.64-15.58,8.25-19.88.93-1.52,4.72-1.09,5.81-.08.51.42.51.84.25,1.35-.51.67-1.01,1.68-1.35,2.27-1.52,2.53-3.62,7.5-5.64,13.31,1.94-2.19,4.04-4.38,5.81-6.57,3.62-4.38,7.16-8.67,10.7-13.05,1.35-1.6,3.71-1.68,5.05,0,2.61,3.28,3.28,4.8,5.14,7.07,1.68,2.02,4.47,2.86,7.92,2.95,4.3.08,8.84,0,13.9-1.68.17,0,.42-.08.67-.08.08,0,.17.08.25.08.08.17,0,.25-.08.34-.84.76-1.85,1.26-2.95,1.6-2.61.93-8.93,2.36-12.21,2.27-4.04-.08-8.34-2.02-12.04-5.31-1.18-1.1-2.27-2.27-3.37-3.45-.67-.84-1.77.08-2.53.93-1.01,1.01-7.07,8.17-9.6,11.12-2.11,2.36-6.65,8.17-8.59,10.11-.59.5-.92.93-1.68.93-1.09,0-3.79-1.85-3.79-3.37Z"></path>
+                                <path class="cls-1 svg-elem-8" d="M537.92,95.72c-1.35-.84-1.52-2.44-1.52-3.79,0-7.75,12.46-19.71,22.15-19.54,2.36,0,4.97.59,6.57,1.77-.25-1.43.51-1.77,1.43-1.77,1.09.08,2.11.51,3.03,1.1.59.42.84,1.01.92,1.68.25,3.79,1.85,9.52,3.62,12.38,1.26,2.19,3.28,3.2,5.98,3.2,6.74,0,15.75-5.64,21.31-9.94.67-.51,1.43-1.18,2.19-1.77.17-.08.25-.17.42-.08.25.17,0,.34,0,.42-.42,1.01-1.1,1.85-1.77,2.61-1.52,1.77-3.45,3.28-5.39,4.63-4.88,3.12-11.12,6.06-16,6.06-3.79,0-7.07-1.35-10.36-4.13-2.44-2.1-4.04-6.91-5.14-10.7-6.23,7.66-10.36,11.79-15.5,16.17-1.26,1.01-2.69,1.85-4.13,2.53-1.09.5-2.11.76-3.11.76-1.6,0-3.2-.59-4.72-1.6ZM555.69,84.85c2.86-2.53,5.47-5.64,8.17-8.59-.68-.84-1.52-1.52-3.03-1.43-6.99.25-19.03,13.39-19.03,18.36,0,1.26,1.01,1.1,1.6.84,4.97-2.02,9.1-6.32,12.3-9.18Z"></path>
+                                <path class="cls-1 svg-elem-9" d="M597.62,91.17c0-4.38,2.36-9.52,8.17-14.74,3.03-2.36,7.16-4.8,11.29-4.72,2.44.08,5.64,1.43,5.64,3.96,0,.67-.17,1.43-.67,2.19-2.53,3.96-10.87,8.84-18.19,11.12-.59,1.43-.93,3.03-.93,4.63,0,3.87,2.19,6.91,8,6.91,6.74,0,15.75-5.64,21.31-9.94.68-.51,1.43-1.18,2.19-1.77.17-.08.25-.17.42-.08.25.17,0,.34,0,.42-.42,1.01-1.09,1.85-1.77,2.61-1.52,1.77-3.45,3.28-5.39,4.63-4.88,3.12-10.95,6.15-15.83,6.06-8.76-.17-14.23-4.8-14.23-11.28ZM617.41,78.62c1.01-.93,1.94-2.53,1.94-3.62,0-.59-.34-.93-1.01-.93s-1.68.25-3.12,1.1c-4.63,2.36-7.83,6.4-10.36,11.03,4.38-2.02,8.93-4.13,12.55-7.58Z"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </p>
+                <div id="mv_text_area" class="animate__animated fadeInUpSmall">
+                    <p>
+                        Thank you for your interest.<br>
+                        In my portfolio, I have posted some of the works I have created so far.<br>
+                        We hope to have the opportunity to work with you.
+                    </p>
+                </div>
+            </section>
+
+            <!-- スクロール -->
+            <div class="scroll_area">
+                <div class="scroll">
+                    <p>Scroll</p>
+                </div>
+            </div>
+
+            <!-- :::::::::::::::::::::::::::::::: WORKS ::::::::::::::::::::::::::::::::  -->
+            <section id="WROKS" class="container_small">
+                <h2 class="target animate__animated">WROKS</h2>
+                <p class="target animate__animated">制作した物</p>
+
+                <!-- ////////////////////  タブ付きフォルダ //////////////////// -->
+                <!--  WEB DESIGNタグ  -->
+                <div class="tab-wrap target animate__animated">
+                    <input id="tab01" type="radio" name="tab" class="tab-switch" checked="checked">
+                    <label class="tab-label" for="tab01">WEB DESIGN</label>
+
+                    <div class="tab-content">
+                        <!-- 1列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- 木村工業株式会社 ---------------->
+                            <div class="item_box item_box_change -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#website_kimurakogyo">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="pc" src="images/kimurakogyo_pc_mb_pc.png" alt="木村工業株式会社サイト">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">木村工業会社</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#WEBサイト</span>
+                                                <span class="item_tag_production">#クライアントワーク</span>
+                                            </div>
+                                            <p class="item_text">
+                                                兵庫県姫路市にあるプラント配管・溶接の建設会社である「木村工業株式会社」様のサイトリニューアルデザインをさせていただきました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- 匠栄建設工業株式会社 ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#website_shouei">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="pc" src="images/shouei_pc_mb.png" alt="匠栄建設工業株式会社サイト">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">匠栄建設工業会社</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#WEBサイト</span>
+                                                <span class="item_tag_production">#自主制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空の建設会社のコーポレートサイトを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- Curcum　ハンドメイドショップ ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#website_cur">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="pc" src="images/curcuma_pc_mb.png" alt="Curcuma公式サイト">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">Curcuma公式サイト</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#WEBサイト</span>
+                                                <span class="item_tag_production">#自主制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                趣味で制作・販売しているハンドメイドショップの公式サイトを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- ポートフォリオ ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#website_port">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="pc" src="images/portforio_pc_mb.png" alt="ポートフォリオサイト">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">ポートフォリオ</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#WEBサイト</span>
+                                                <span class="item_tag_production">#自主制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                これまでの経歴や制作物をまとめたポートフォリオを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ３列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- まちづくり委員会 ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#website_hoshinami">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="pc" src="images/hoshinami_pc_mb.png" alt="まちづくり委員会サイト">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">まちづくり委員会</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#WEBサイト</span>
+                                                <span class="item_tag_production">#課題製作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                職業訓練校でのチーム制作としてまちづくりをされているクライアント様のサイトを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- 不動産バナー ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#baneer_real_estate">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/realestate_red.jpg" alt="不動産高級マンションバナー">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">SOZO不動産会社</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#バナー</span>
+                                                <span class="item_tag_production">#課題制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空の高級マンションを販売する不動産会社のバナーを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 4列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- LINE登録キャンペーンバナー ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#baneer_line">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/LINE_banner01.jpg" alt="LINE登録キャンペーンバナー">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">グリルマスターズ</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#バナー</span>
+                                                <span class="item_tag_production">#自主製作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                LINEアカウント登録を促す架空飲食店のバナーを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- ショッピングサイト　クリスマスバナー ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#baneer_xmas">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/Xmas_pop01.jpg" alt="クリスマスバナー">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">ショッピングサイト</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#バナー</span>
+                                                <span class="item_tag_production">#課題製作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空ショッピングサイトのクリスマス限定ポイントアップキャンペーンのバナー制作をしました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ５列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- ハロウィンバナー ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#baneer_halloween">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="baneer_img" src="images/halloween_banner.jpg" alt="ハロウィンバナー">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">洋菓子店</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#バナー</span>
+                                                <span class="item_tag_production">#自主製作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空洋菓子店の新作スイーツのバナー制作をしました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- 24時間クーポンバナー ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="webdesign.html#baneer_coupon">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img class="baneer_img" src="images/coupon_banner_01.jpg" alt="24時間限定クーポンバナー">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">ショッピングサイト</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#バナー</span>
+                                                <span class="item_tag_production">#自主製作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空ショッピングサイトの24時間限定クーポンのバナー制作をしました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ボタン -->
+                        <div class="button target animate__animated">
+                            <a class="fancy" href="webdesign.html">
+                                <span class="top-key"></span>
+                                <span class="text">VIEW MORE</span>
+                                <span class="bottom-key-1"></span>
+                                <span class="bottom-key-2"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!--  DTPタグ -->
+                    <input id="tab03" type="radio" name="tab" class="tab-switch">
+                    <label class="tab-label" for="tab03">DTP</label>
+
+                    <div class="tab-content">
+                        <!-- 1列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- 名刺 ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="dtp.html#dtp_card">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/business_card_.jpg" alt="私の名刺">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">私の名刺</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#名刺</span>
+                                                <span class="item_tag_production">#課題制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                ビジネスシーンや交流会などで使用し、初対面の相手に自分をアピールするために制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- 架空カフェのチラシ ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="dtp.html#dtp_fryer">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/flyer_.jpg" alt="はんなりとチラシ">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">カフェ はんなりと</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#チラシ</span>
+                                                <span class="item_tag_production">#課題制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空の建設会社のコーポレートサイトを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ３列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- 動物園アイコン ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="dtp.html#dtp_zoo_icon">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/zoo_icon.jpg" alt="動物園アイコン">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">動物園 アイコン</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#アイコン</span>
+                                                <span class="item_tag_production">#課題制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                架空の動物園のアイコンを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- 波木台ロゴ ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="dtp.html#dtp_namikidai_logo">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/namikidai_logo_mc.jpg" alt="波木台ロゴ">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">まちづくり委員会</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#ロゴ</span>
+                                                <span class="item_tag_production">#課題制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                職業訓練校でのチーム制作としてまちづくりをされているクライアント様のロゴを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2列目 -->
+                        <div class="tab-content_inner">
+                            <!-- -------------- Curcuma　ショップカード ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="dtp.html#dtp_shop_card">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/shop_card_img.jpg" alt="Curcumaショップカード">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">Curcuma ショップカード</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#ショップカード</span>
+                                                <span class="item_tag_production">#自主制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                趣味で制作・販売しているハンドメイドショップのショップカードを制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- -------------- スマホケース梱包紙 ---------------->
+                            <div class="item_box -text-from-left target animate__animated">
+                                <a class="item_link" href="dtp.html#dtp_wrapping">
+                                    <div class="item_content">
+                                        <div class="item_image">
+                                            <img src="images/butterfly_band_img.jpg" alt="スマホケース梱包紙">
+                                        </div>
+                                        <div class="item_inner">
+                                            <p class="item_title">Curcuma 梱包紙</p>
+                                            <div class="item_tag_wrapper">
+                                                <span class="item_tag_kinds">#包装紙</span>
+                                                <span class="item_tag_production">#自主制作</span>
+                                            </div>
+                                            <p class="item_text">
+                                                趣味で制作・販売しているハンドメイドショップの梱包紙を制作しました。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- ボタン -->
+                        <div class="button target animate__animated">
+                            <a class="fancy" href="dtp.html">
+                                <span class="top-key"></span>
+                                <span class="text">VIEW MORE</span>
+                                <span class="bottom-key-1"></span>
+                                <span class="bottom-key-2"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="boder"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- :::::::::::::::::::::::: ABOUT ::::::::::::::::::::::::  -->
+            <section id="ABOUT">
+                <h2 class="target animate__animated">ABOUT</h2>
+                <p class="target animate__animated">私について</p>
+
+                <div id="ABOUT_top" class="container_small">
+                    <div class="text_wrapper">
+                        <div class="name target animate__animated">
+                            <div class="name_ruby">
+                                <p>ぺく</p>
+                                <p>みれ</p>
+                            </div>
+                            <p><span class="marker">白 未来</span></p>
+                        </div>
+                        <div class="text target animate__animated">
+                            <p>兵庫県姫路市出身の25歳。</p>
+                            <p>バレエ用品専門店で4年間販売員として勤務し、お客様に喜んでいただける商品を提供することにやりがいを感じながらも販促物を制作する過程でデザインへの興味を持ち退職。</p>
+                            <p>退職後は、職業訓練校に通い、Webデザイナーコースを受講してデザインスキルやコーディングスキルを習得。</p>
+                            <p>現在は、制作活動をしながらデザイナーを目指し、就職活動中。</p>
+                        </div>
+                        <!-- ボタン -->
+                        <div class="button target animate__animated">
+                            <a class="fancy" href="about.html">
+                                <span class="top-key"></span>
+                                <span class="text">VIEW MORE</span>
+                                <span class="bottom-key-1"></span>
+                                <span class="bottom-key-2"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="ABOUT_img target animate__animated">
+                        <img src="images/me_illustration.png" alt="女の子">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- ************************************************************************************ -->
+        
+        <!-- *************************************  フッター ************************************* -->
+        <footer>
+            <div id="CONTACT" class="target animate__animated">
+                <h2>CONTACT</h2>
+                <p>少しでも気になれば<span class="lineBreak">ご連絡くださると嬉しいです！</span></p>
+
+                <div class="CONTACT_wrapper">
+                    <div class="CONTACT_inner">
+                        <div class="mail">
+                            <div class="mail_icon">
+                                <img src="images/mail_icon.png" alt="メール">
+                            </div>
+                            <p class="mail_text"><a href="mail:p.mire.224@gmail.com">p.mire.224@gmail.com</a></p>
+                        </div>
+
+                        <div class="tel">
+                            <div class="tel_icon">
+                                <img src="images/iPhone_icon.png" alt="電話">
+                            </div>
+                            <p class="tel_text"><a href="tel:090-5900-3650">090-5900-3650</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p><small>&copy;MIRAI PAEK</small></p>
+
+            <!-- トップに戻るボタン -->
+            <div class="topButton">
+                <a href="#"><img src="images/marker.png" alt="トップに戻るボタン"></a>
+            </div>
+        </footer>
+
+        <!-- Java Script -->
+        <script src="js/scrollObservation.js"></script>
+        <script src="js/loading.js"></script>
+        <script src="js/drawerBtutton.js"></script>
+        <script src="js/marker.js"></script>
+    </body>
+</html>
