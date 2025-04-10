@@ -1,0 +1,230 @@
+/* ********** 共通のもの ********** */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #33334d;
+    letter-spacing: 0.1rem;
+    background-image: repeating-linear-gradient(
+            90deg,
+            #f4f4f4 0,
+            #f4f4f4 1px,
+            transparent 1px,
+            transparent 30px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            #f4f4f4 0,
+            #f4f4f4 1px,
+            transparent 1px,
+            transparent 30px
+        );
+}
+
+/* アドビフォント */
+/* "ta-koigokoro" 手書き日本語 */
+/* "mendl-sans-dusk" 見出し欧文 */
+
+img {
+    width: 100%;
+}
+
+h2 {
+    font-size: clamp(2rem, 1.489rem + 2.56vw, 3.125rem);
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(1rem, 0.545rem + 2.27vw, 2rem);
+}
+
+h4 {
+    font-size: clamp(1rem, 0.773rem + 1.14vw, 1.5rem);
+    font-weight: 500;
+}
+
+p,
+dt,
+dd {
+    font-size: clamp(0.75rem, 0.679rem + 0.36vw, 1rem);
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+}
+
+/* 改行 */
+.lineBreak {
+    display: inline-block;
+}
+
+/* コンテンツ幅 */
+.container {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+.container_small{
+    max-width: 1000px;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+/* トップに戻るボタン */
+.topButton {
+    width: 60px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: all 0.3s linear;
+    z-index: 10000;
+}
+.topButton.btnActive {
+    opacity: 1;
+}
+
+/* ボタン */
+.button {
+    text-align: center;
+}
+
+.fancy {
+    background-color: transparent;
+    border: 1.5px solid #33334d;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    overflow: visible;
+    padding: 10px 19px;
+    position: relative;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    font-size: 10px;
+}
+
+.fancy::before {
+    content: "";
+    width: 1rem;
+    height: 1px;
+    background: #33334d;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: #33334d;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+/* 黄色マーカー */
+.marker {
+    background: linear-gradient(
+        transparent 70%,
+        #fbff1a 50%
+    ); /* マーカーを引く */
+    display: inline;
+    background-repeat: no-repeat;
+    background-size: 0% 100%; /* マーカーの横方向を0にして縮める */
+    transition: background-size 1.5s; /* マーカーが引かれる速度を指定 */
+}
+
+/* Java Scriptで「.on」クラスが付く */
+.marker.on {
+    background-size: 100% 100%; /* 横方向を100%にして、マーカーを引く */
+}
+
+/* アニメーション */
+.target {
+    opacity: 0;
+}
+.animate__fadeInUp {
+    opacity: 1;
+}
+
+@keyframes fadeInUpSmall {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 30%, 0);
+        transform: translate3d(0, 30%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+.fadeInUpSmall {
+    -webkit-animation-name: fadeInUpSmall;
+    animation-name: fadeInUpSmall;
+}

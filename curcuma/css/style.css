@@ -1,0 +1,946 @@
+/* ////////////////////////// 読み込みCSSファイル ////////////////////////// */
+
+/* 共通 css */
+@import url(basic.css);
+
+/* ローディング画面 css */
+@import url(loading.css);
+
+/* ハートクリック css */
+@import url(heart.css);
+
+/* ////////////////////////////////////////////////////////////////////// */
+
+/* トップに戻るボタン */
+.topButton {
+    display: block;
+    width: 30px;
+    color: #333333;
+    border-top: 2px solid #333333;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    opacity: 0;
+    transition: all 0.3s linear;
+    z-index: 10000;
+}
+
+.topButton:before {
+    display: none;
+}
+
+.topButton:after {
+    content: "↑";
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.topButton.active {
+    opacity: 1;
+}
+
+/* *******************************  ヘッダー ******************************* */
+header .logo {
+    width: 200px;
+    margin-inline: auto;
+    margin-top: 10px;
+}
+
+#header_top {
+    margin: 40px auto 20px;
+}
+
+/* ドロワーボタン */
+#drawerButton {
+    display: none;
+}
+
+/*  メニュー */
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+#menu li:nth-child(3) {
+    padding-left: 3rem;
+}
+
+#header_top nav #menu li a {
+    padding-bottom: 5px;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+#header_top nav #menu li a::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    background: #333333;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform 0.3s;
+}
+
+#header_top nav #menu li a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* *********************************************************************** */
+
+/* *******************************  メイン ******************************** */
+/* ::::::::::::: メインビジュアル ::::::::::::: */
+#mv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#mv_text {
+    width: 40%;
+    position: absolute;
+}
+
+#mv_text h2 {
+    width: 90%;
+}
+
+#mv_text p {
+    padding-left: 1rem;
+}
+
+#mv #mv_img {
+    width: 78%;
+    margin-left: auto;
+}
+
+/* スクロール */
+.scroll_area {
+    height: 90px;
+    margin-top: 40px;
+}
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 線 */
+.scroll::before {
+    animation: scroll 2s infinite;
+    background-color: #5f5f5f;
+    bottom: -70px;
+    content: "";
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 1px;
+}
+/* 線のアニメーション */
+@keyframes scroll {
+    0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+    }
+    50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+    }
+    51% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+    }
+    100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+    }
+}
+
+/* :::::::::::::::: コンセプト :::::::::::::::: */
+
+#CONCEPT {
+    margin-top: 140px;
+    text-align: center;
+}
+
+#CONCEPT h2 {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+#CONCEPT h2::before {
+    font-size: 6rem;
+    content: "CONCEPT";
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    color: #efefef;
+    opacity: 0.5;
+}
+
+#CONCEPT_text p:nth-child(3) {
+    margin-top: 40px;
+}
+
+#CONCEPT_text p:nth-child(3),
+#CONCEPT_text p:nth-child(4) {
+    margin-bottom: 40px;
+}
+
+/* :::::::::: コレクション(ランキング) ::::::::: */
+#COLLECTION {
+    margin-top: 250px;
+    position: relative;
+}
+
+#COLLECTION h2::before {
+    font-size: 4rem;
+    content: "COLLECTION";
+    position: absolute;
+    width: 100%;
+    top: -25px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 5%;
+}
+
+.ranking > h3 {
+    margin-top: 2.5rem;
+}
+
+.ranking > h3,
+.lineUp > h3 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#ranking_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+#ranking_box p {
+    line-height: 1.5rem;
+}
+
+#ranking_inner {
+    flex-basis: 32%;
+}
+
+.ranking_img_01,
+.ranking_img_02,
+.ranking_img_03 {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+/*  ランキングタグ  */
+.ranking_tag::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 80px solid transparent;
+    border-left: 80px solid #333333;
+}
+
+.ranking_img_01::after {
+    content: "No.1";
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    color: #fdfdfd;
+    transform: rotate(-45deg);
+}
+
+.ranking_img_02::after {
+    content: "No.2";
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    color: #fdfdfd;
+    transform: rotate(-45deg);
+}
+
+.ranking_img_03::after {
+    content: "No.3";
+    position: absolute;
+    top: 6%;
+    left: 3%;
+    color: #fdfdfd;
+    transform: rotate(-45deg);
+}
+
+#ranking_inner p {
+    text-align: center;
+}
+
+/*  VIEW MOREボタン  */
+.button_line004 a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-inline: auto;
+    margin-top: 30px;
+    max-width: 120px;
+    transition: 0.3s ease-in-out;
+    font-size: 12px;
+    padding-block: 0.5rem;
+}
+.button_line004 a:before,
+.button_line004 a:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-color: #333333;
+    box-sizing: border-box;
+    border-style: solid;
+    display: block;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+.button_line004 a:before {
+    top: -6px;
+    left: -6px;
+    border-width: 1px 0 0 1px;
+    z-index: 5;
+}
+.button_line004 a:after {
+    bottom: -6px;
+    right: -6px;
+    border-width: 0 1px 1px 0;
+}
+.button_line004 a:hover:before,
+.button_line004 a:hover:after {
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-color: #333333;
+}
+.button_line004 a:hover {
+    color: #fff;
+    background-color: #333333;
+    border-color: #333333;
+}
+
+/* :::::::::: コレクション(ラインナップ) ::::::: */
+.lineUp {
+    margin-block: 100px;
+}
+
+/* swiper スライダー */
+.swiper {
+    width: 100%;
+    height: 300px;
+}
+
+.swiper-slide {
+    padding-inline: 0.5rem;
+}
+
+.swiper-slide p {
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+.swiper-slide img {
+    margin-bottom: 1rem;
+}
+
+.swiper-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-container02 {
+    display: none;
+}
+
+/* 矢印 */
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+    background-color: #333333;
+    opacity: 80%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 42%;
+}
+.swiper-container .swiper-button-next::after,
+.swiper-container .swiper-button-prev::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #fdfdfd;
+    font-size: 1.5rem;
+}
+
+.swiper-container .swiper-button-next::after {
+    content: "\f054"; /* FontAwesomeの右矢印 */
+}
+
+.swiper-container .swiper-button-prev::after {
+    content: "\f053"; /* FontAwesomeの左矢印 */
+}
+
+/* :::::::::::::::: ショップ :::::::::::::::: */
+#SHOP {
+    margin-top: 200px;
+    position: relative;
+}
+
+#SHOP h2::before {
+    font-size: 4rem;
+    content: "SHOP";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: -22px;
+    z-index: -1;
+    opacity: 5%;
+}
+
+.minne .minne_logo {
+    width: 30%;
+    margin: 40px auto 10px;
+}
+
+.minne .minne_pc {
+    max-width: 44%;
+    margin-inline: auto;
+}
+
+.minne p {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* クリックしてないリンク */
+.minne p a:link {
+    color: #1a0dab;
+}
+/* クリック済みリンク */
+.minne p a:visited {
+    color: #660099;
+}
+
+.SHOP_text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.SHOP_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.SHOP_icon a {
+    display: block;
+    flex-basis: 36px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.SHOP_icon a span {
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* :::::::::::::::: 配送方法 :::::::::::::::: */
+#delivery {
+    margin: 100px auto 20px;
+    position: relative;
+}
+
+#delivery h3 {
+    font-size: 22px;
+}
+
+.delivery_text {
+    margin-top: 40px;
+    line-height: normal;
+    text-align: center;
+    position: relative;
+}
+
+.delivery_text p:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+.delivery_text p:nth-child(3) {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* ポスト */
+.delivery_text::before {
+    content: "";
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-image: url(../images/post.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+}
+
+/* 家 */
+.delivery_text::after {
+    content: "";
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-image: url(../images/house.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: -37.5px;
+}
+/* *********************************************************************** */
+
+/* *******************************  フッター ******************************* */
+
+footer {
+    border-top: 2px solid #333333;
+    position: relative;
+}
+
+.footer_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 40px;
+}
+
+.footer_box .logo {
+    flex-basis: 20%;
+}
+
+.footer_box #menu {
+    flex-basis: 80%;
+}
+
+.footer_box #menu li {
+    margin-left: 50px;
+}
+
+.footer_box #menu li:nth-child(3) {
+    padding-left: 0;
+}
+
+footer p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* *********************************************************************** */
+
+/* **************************** メディアクエリ ******************************/
+/* ///////////////////// max-width: 768px ///////////////////// */
+@media screen and (max-width: 768px) {
+    /* 矢印 */
+    .swiper-container .swiper-button-next,
+    .swiper-container .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+        top: 40%;
+    }
+    .swiper-container .swiper-button-next::after,
+    .swiper-container .swiper-button-prev::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        color: #fdfdfd;
+        font-size: 1.2rem;
+    }
+}
+/* ///////////////////////////////////////////////////////////// */
+/* ///////////////////// max-width: 650px ///////////////////// */
+@media screen and (max-width: 650px) {
+    .topButton {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    #header_top {
+        margin: 0;
+    }
+    /* :::::: ドロワーメニュー :::::: */
+    header #drawerButton {
+        position: fixed;
+        top: 6px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        display: block;
+        z-index: 1000000;
+    }
+
+    #drawerButton span {
+        width: 60%;
+        height: 2px;
+        display: block;
+        background-color: #333333;
+        position: absolute;
+        left: 20%;
+        transition: all 0.3s linear;
+    }
+
+    #drawerButton span:nth-child(1) {
+        top: 10px;
+    }
+
+    #drawerButton span:nth-child(2) {
+        top: 19px;
+    }
+
+    #drawerButton span:nth-child(3) {
+        bottom: 10px;
+    }
+
+    #drawerButton.close span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 18px;
+    }
+
+    #drawerButton.close span:nth-child(2) {
+        transform: scale(0);
+    }
+
+    #drawerButton.close span:nth-child(3) {
+        transform: rotate(45deg);
+        top: 18px;
+    }
+    /* ::::::::::::::::::::::::::: */
+    /* :::::: 見えないメニュー :::::: */
+    header #header_top #menu {
+        background-color: #fdfdfd;
+        display: block;
+        position: fixed;
+        height: 100%;
+        width: 80%;
+        right: -100vw;
+        top: 0;
+        transition: all 0.3s linear;
+        z-index: 20000;
+    }
+
+    header #header_top #menu li a {
+        margin-top: 150px;
+    }
+
+    #header_top nav #menu li a::after {
+        width: 28%;
+        left: 36%;
+    }
+
+    header #header_top #menu.open {
+        right: 0;
+    }
+
+    #menu li:nth-child(3) {
+        padding-left: 0;
+    }
+}
+/* ::::::::::::::::::::::::::: */
+#mv {
+    margin-top: 0.5rem;
+}
+
+#CONCEPT h2::before {
+    font-size: 4rem;
+    bottom: -25px;
+}
+
+#COLLECTION h2::before,
+#SHOP h2::before {
+    font-size: 3rem;
+    top: -16px;
+}
+
+#ranking_box p,
+.swiper-slide p {
+    line-height: 1.2rem;
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.heart.redHeart {
+    width: 20px;
+    height: 20px;
+}
+
+/* //////////////////////////////////////////////////////////// */
+/* ///////////////////// max-width: 500px ///////////////////// */
+@media screen and (max-width: 500px) {
+    header .logo,
+    footer .logo {
+        width: 150px;
+    }
+
+    header .logo {
+        margin-left: 1rem;
+    }
+
+    #mv {
+        display: block;
+        padding-inline: 0;
+    }
+
+    #mv #mv_text {
+        width: 100%;
+        top: 90px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    #mv_text h2 {
+        display: none;
+    }
+
+    #mv_text p {
+        line-height: 1.6rem;
+    }
+
+    #mv #mv_img img {
+        display: none;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #mv #mv_img {
+        background-image: url(../images/mv_mobile.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .scroll_area {
+        margin-top: 20px;
+    }
+
+    #CONCEPT h2 {
+        margin-bottom: 60px;
+    }
+
+    #CONCEPT_text p {
+        line-height: 1.2rem;
+    }
+
+    #CONCEPT_text p:nth-child(3) {
+        margin-top: 20px;
+    }
+
+    #CONCEPT_text p:nth-child(3),
+    #CONCEPT_text p:nth-child(4) {
+        margin-bottom: 20px;
+    }
+
+    #COLLECTION {
+        margin-top: 200px;
+    }
+
+    #ranking_box {
+        display: block;
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    #ranking_inner {
+        margin-bottom: 20px;
+    }
+
+    .ranking_tag::before {
+        border-bottom: 80px solid transparent;
+        border-left: 80px solid #333333;
+    }
+
+    .ranking_img_01::after,
+    .ranking_img_02::after,
+    .ranking_img_03::after {
+        top: 16px;
+        left: 8px;
+        font-size: 16px;
+    }
+
+    .heart,
+    .heart.redHeart {
+        margin-top: 5px;
+    }
+
+    .ranking .button_line004 a {
+        margin-top: 10px;
+    }
+
+    .swiper-container02 {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .swiper-container02 {
+        margin-top: 90px;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+
+    .lineUp .button_line004 a {
+        margin-top: 20px;
+    }
+
+    .button_line004 a {
+        max-width: 90px;
+        font-size: 10px;
+    }
+
+    #delivery {
+        margin-bottom: 60px;
+    }
+
+    .minne .minne_logo {
+        width: 40%;
+    }
+
+    .minne .minne_pc {
+        max-width: 54%;
+    }
+
+    .minne p {
+        font-size: 12px;
+    }
+
+    .footer_box {
+        display: block;
+    }
+
+    footer .logo {
+        width: 150px;
+        margin-inline: auto;
+    }
+
+    footer nav {
+        display: none;
+    }
+
+    /* ポスト */
+    .delivery_text::before {
+        width: 60px;
+        height: 60px;
+        bottom: -66px;
+        left: -10px;
+    }
+
+    /* 家 */
+    .delivery_text::after {
+        width: 60px;
+        height: 60px;
+        bottom: -72px;
+        right: -10px;
+    }
+}
+/* //////////////////////////////////////////////////////////// */
+/* ///////////////////// max-width: 390px ///////////////////// */
+@media screen and (max-width: 390px) {
+    #COLLECTION {
+        margin-top: 120px;
+    }
+
+    .ranking > h3 {
+        margin-top: 2rem;
+    }
+
+    #ranking_inner {
+        margin-bottom: 20px;
+    }
+
+    .swiper-slide img,
+    .ranking_img_01,
+    .ranking_img_02,
+    .ranking_img_03 {
+        margin-bottom: 0.5rem;
+    }
+
+    .ranking_tag::before {
+        border-bottom: 60px solid transparent;
+        border-left: 60px solid #333333;
+    }
+
+    .ranking_img_01::after,
+    .ranking_img_02::after,
+    .ranking_img_03::after {
+        top: 12px;
+        left: 4px;
+        font-size: 14px;
+    }
+
+    .SHOP_text .lineBreak {
+        margin: 0;
+    }
+
+    .SHOP_icon a {
+        flex-basis: 26px;
+        margin-top: 20px;
+    }
+}
+/* //////////////////////////////////////////////////////////// */
+/* ///////////////////// max-width: 360px ///////////////////// */
+@media screen and (max-width: 360px) {
+    #CONCEPT h2 {
+        font-size: 1.1rem;
+    }
+
+    #CONCEPT h2::before {
+        font-size: 3rem;
+        bottom: -18px;
+    }
+
+    #COLLECTION h2::before,
+    #SHOP h2::before {
+        font-size: 2rem;
+        top: -8px;
+    }
+}
+/* //////////////////////////////////////////////////////////// */
+/* ///////////////////// max-width: 320px ///////////////////// */
+@media screen and (max-width: 320px) {
+    #CONCEPT h2 {
+        font-size: 1.2rem;
+    }
+    #CONCEPT h2::before {
+        bottom: -6px;
+    }
+
+    #CONCEPT h2 > .lineBreak {
+        margin-top: 4px;
+    }
+}
+/* *********************************************************************** */

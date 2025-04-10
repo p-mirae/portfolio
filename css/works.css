@@ -1,0 +1,280 @@
+/* :::::::::::::::::::: 見出し :::::::::::::::::::: */
+.WEBSITE h4,
+.BANNER h4,
+.DTP h4 {
+    font-family: "mendl-sans-dusk";
+    align-items: center; 
+    display: flex;
+    white-space: nowrap;
+}
+
+/* ボーダー線 */
+.border.line::after,
+.border_Immediately::after,
+.border_Immediately_different::after {
+    background-color: #4e4e4e; 
+    content: "";
+    height: 1px; /* 横線の高さ */
+    width: 100%; /* 横線の長さ */
+    margin-left: 1rem;
+}
+.border.line::after,
+.border_Immediately::after{
+    animation: border_anim 1s linear forwards;
+}
+@keyframes border_anim {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.border_Immediately_different{
+    animation: border_anim_different 1s linear forwards;
+}
+@keyframes border_anim_different {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+#website_kimurakogyo,
+#dtp_card,
+#shouei_pc_design,
+#shouei_mb_design {
+    margin-top: 80px;
+}
+
+/* :::::::::::::::::::: コンテンツ幅 :::::::::::::::::::: */
+.banner_wrapper {
+    max-width: 900px;
+}
+
+.website_wrapper,
+.banner_wrapper,
+.dtp_wrapper,
+.design_pc_wrapper,
+.design_mb_wrapper {
+    margin: 40px auto 0;
+}
+
+.website_text_wrapper {
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+/* :::::::::::::::::::: シャドウ :::::::::::::::::::: */
+.WEBSITE .website_img img,
+.WEBSITE .banner_img img,
+.DTP #dtp_card .dtp_img img,
+.DTP #dtp_fryer .dtp_img img,
+.DTP #dtp_shop_card .dtp_img img,
+.DTP #dtp_wrapping .dtp_img img,
+#shouei_pc_design .design_pc_wrapper .pc_img img,
+#shouei_mb_design .design_mb_wrapper .mb_img img{
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* :::::::::::::::::::: 説明文 :::::::::::::::::::: */
+.website_text_wrapper,
+.banner_text_wrapper,
+.dtp_text_wrapper {
+    margin-top: 80px;
+}
+
+.website_text_inner,
+.banner_text_inner,
+.dtp_text_inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.website_text_inner + .website_text_inner,
+.banner_text_inner + .banner_text_inner,
+.dtp_text_inner + .dtp_text_inner {
+    margin-top: 40px;
+}
+
+.website_text_inner dt,
+.website_icon dt,
+.banner_text_inner dt,
+.banner_icon dt,
+.dtp_text_inner dt,
+.dtp_icon dt {
+    flex-basis: 14%;
+    font-weight: normal;
+}
+
+.website_text_inner dd,
+.banner_text_inner dd,
+.dtp_text_inner dd {
+    flex-basis: 84%;
+    line-height: 1.4rem;
+}
+
+.icon_wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.website_icon,
+.banner_icon,
+.dtp_icon {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    gap: 0.8rem;
+}
+
+.website_icon .icon,
+.banner_icon .icon,
+.dtp_icon .icon {
+    width: 30px;
+}
+
+#website_shouei,
+#website_cur,
+#website_port,
+#website_hoshinami,
+#baneer_real_estate,
+#baneer_line,
+#baneer_xmas,
+#baneer_halloween,
+#baneer_coupon,
+#dtp_fryer,
+#dtp_zoo_icon,
+#dtp_namikidai_logo,
+#dtp_shop_card,
+#dtp_wrapping,
+#shouei_mb_design {
+    margin-top: 200px;
+}
+
+/* :::::::::::::::::::: WEB SITE :::::::::::::::::::: */
+.website_wrapper .website_pc_img,
+.website_wrapper .website_img_wrapper,
+.website_img_item {
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+.website_wrapper .website_img_wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+.website_wrapper .website_img:first-child {
+    width: 80%;
+}
+
+.website_wrapper .website_img:last-child {
+    width: 20%;
+}
+
+.website_wrapper .website_img,
+.website_img_item {
+    margin-top: 40px;
+}
+
+/* ::::::::::::::::::::: BANNER ::::::::::::::::::::: */
+.banner_img_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.banner_wrapper .banner_img {
+    width: 30%;
+}
+
+#baneer_xmas .banner_img {
+    width: 40%;
+}
+
+#baneer_xmas .banner_img_wrapper {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#baneer_halloween .banner_img {
+    width: 40%;
+    margin-inline: auto;
+}
+
+#baneer_coupon .banner_img_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#baneer_coupon .banner_wrapper .banner_img {
+    width: 36%;
+}
+
+/* ::::::::::::::::::::::: DTP :::::::::::::::::::::: */
+.dtp_wrapper .dtp_img_wrapper {
+    max-width: 660px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dtp_wrapper .dtp_img {
+    margin-top: 20px;
+    width: 35%;
+}
+
+#dtp_fryer .dtp_wrapper .dtp_img_wrapper .dtp_img{
+    width: 45%;
+}
+
+#dtp_namikidai_logo .dtp_wrapper .dtp_img{
+    width: 70%;
+    margin-inline: auto;
+    margin-top: 60px;
+}
+
+#dtp_wrapping .dtp_wrapper .dtp_img{
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 60px;
+}
+
+/* ::::::::::::::::::::::: 匠栄デザイン還付ページ :::::::::::::::::::::: */
+#shouei_pc_design .design_pc_wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: calc(2rem / 2);
+    flex-wrap: wrap;
+}
+
+#shouei_pc_design .design_pc_wrapper .pc_img{
+    flex-basis: calc((100% / 2) - (2rem / 2));
+}
+
+#shouei_pc_design .design_pc_wrapper .pc_img:nth-of-type(n+3),
+#shouei_mb_design .design_mb_wrapper .mb_img:nth-of-type(n+4){
+    margin-top: 120px;
+}
+
+#shouei_mb_design .design_mb_wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: calc(2rem / 3);
+    flex-wrap: wrap;
+}
+
+#shouei_mb_design .design_mb_wrapper .mb_img{
+    flex-basis: calc((100% / 3) - (2rem / 3));
+}

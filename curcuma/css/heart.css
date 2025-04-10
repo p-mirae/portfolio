@@ -1,0 +1,66 @@
+/* *************** ハート *************** */
+.heart {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-inline: auto;
+    margin-top: 10px;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.heart:hover {
+    opacity: 0.5;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background: #d9d9d9;
+    border-radius: 25px 25px 0 0;
+    display: block;
+    position: absolute;
+}
+
+.heart::before {
+    transform: rotate(-45deg);
+    left: 14%;
+}
+
+.heart::after {
+    transform: rotate(45deg);
+    right: 14%;
+}
+
+/* js「click.js」で「.redHeart」付け外しで赤色のハートに変更 */
+.heart.redHeart {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 10px auto 0px;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.heart.redHeart::before,
+.heart.redHeart::after {
+    content: "";
+    width: 50%;
+    height: 80%;
+    background: #cf0003;
+    border-radius: 25px 25px 0 0;
+    display: block;
+    position: absolute;
+}
+
+.heart.redHeart::before {
+    transform: rotate(-45deg);
+    left: 14%;
+}
+
+.heart.redHeart::after {
+    transform: rotate(45deg);
+    right: 14%;
+}

@@ -1,0 +1,217 @@
+/* ::::::::::::::::::::::: VISION ::::::::::::::::::::::: */
+main h2 {
+    font-family: "mendl-sans-dusk";
+    font-weight: 600;
+    margin-top: 180px;
+    position: relative;
+}
+
+main > p,
+#STRONGTH > p,
+#SKILL > p,
+#PASSTIME > p:nth-child(2) {
+    text-align: center;
+}
+
+#VISION,
+#STRONGTH .STRONGTH_text {
+    margin-top: 64px;
+}
+
+#VISION > p,
+#STRONGTH .STRONGTH_text p:nth-child(1),
+#PASSTIME > p:nth-child(3),
+#thank_you > p {
+    font-family: "ta-koigokoro";
+    font-size: clamp(1.125rem, 0.894rem + 1.15vw, 1.688rem);
+    text-align: center;
+    line-height: 1.8;
+}
+
+#thank_you > p{
+    line-height: 2.5;
+}
+
+#VISION .VISION_text,
+#STRONGTH .STRONGTH_text p:nth-child(2) {
+    margin-top: 30px;
+    line-height: 1.2rem;
+}
+
+#VISION .VISION_text p:nth-child(2),
+#STRONGTH .STRONGTH_text p:nth-of-type(3) {
+    margin: 16px 0 16px;
+}
+
+/* ::::::::::::::::::::::: STRONGTH ::::::::::::::::::::::: */
+#STRONGTH h3,
+#SKILL h3,
+#PASSTIME h3 {
+    font-family: "mendl-sans-dusk";
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ::::::::::::::::::::::: SKILL ::::::::::::::::::::::: */
+#SKILL > p:not(:first-child) {
+    line-height: 1.2rem;
+}
+
+#SKILL > p:nth-child(4) {
+    margin: 40px 0 20px;
+}
+
+#SKILL .SKILL_wrapper {
+    margin-top: 40px;
+    padding-left: 2rem;
+}
+
+#SKILL .SKILL_wrapper .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+
+#SKILL .SKILL_wrapper .SKILL_inner {
+    flex-basis: 45%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#SKILL .SKILL_wrapper .SKILL_inner .SKILL_icon {
+    width: 50px;
+    flex-shrink: 0;
+}
+
+#SKILL .SKILL_wrapper .SKILL_inner p span {
+    font-family: "mendl-sans-dusk";
+    font-size: clamp(1rem, 0.773rem + 1.14vw, 1.2rem);
+    font-weight: 600;
+}
+
+/* ::::::::::::::::::::::: PASSTIME ::::::::::::::::::::::: */
+#PASSTIME {
+    padding-inline: 3rem;
+}
+
+#PASSTIME > p:nth-child(3) {
+    margin-top: 40px;
+}
+
+#PASSTIME .PASSTIME_text {
+    margin-top: 40px;
+}
+
+#PASSTIME .PASSTIME_text p + p {
+    margin-top: 20px;
+}
+
+/* グリットレイアウト */
+#PASSTIME .parent {
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+    padding-block: 24px;
+}
+    
+#PASSTIME .div1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 12 / span 12;
+}
+
+#PASSTIME .div2 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+}
+
+#PASSTIME .div3 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 6;
+}
+
+#PASSTIME .div4 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 5;
+}
+
+#PASSTIME .div5 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 6;
+    grid-row-start: 5;
+}
+
+#PASSTIME .div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 9;
+}
+
+#PASSTIME .div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 6;
+    grid-row-start: 9;
+}
+        
+
+#PASSTIME .PASSTIME_account {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+#PASSTIME .PASSTIME_account .account {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-basis: 40%;
+}
+
+#PASSTIME .PASSTIME_account .account:nth-child(1){
+    justify-content: flex-end;
+}
+
+#PASSTIME .PASSTIME_account .account .icon {
+    flex-basis: 25px;
+}
+
+
+#PASSTIME .PASSTIME_account .account:nth-child(2) .icon {
+    flex-basis: 23px;
+}
+
+#PASSTIME .PASSTIME_account .account p {
+    font-size: clamp(0.6rem, 0.679rem + 0.36vw, 0.7rem);
+    letter-spacing: normal;
+}
+
+/* クリックしてないリンク */
+.WEBSITE #website_kimurakogyo .website_wrapper .website_text_wrapper a:link,
+.WEBSITE #website_shouei .website_wrapper .website_text_wrapper a:link,
+.WEBSITE #website_cur .website_wrapper .website_text_wrapper a:link,
+#PASSTIME .PASSTIME_account .account p > a:link {
+    color: #1a0dab;
+    border-bottom: 1px solid #1a0dab;
+}
+/* クリック済みリンク */
+.WEBSITE #website_kimurakogyo .website_wrapper .website_text_wrapper a:link,
+.WEBSITE #website_shouei .website_wrapper .website_text_wrapper a:link,
+.WEBSITE #website_cur .website_wrapper .website_text_wrapper a:visited,
+#PASSTIME .PASSTIME_account .account p > a:visited {
+    color: #660099;
+    border-bottom: 1px solid #660099;
+}

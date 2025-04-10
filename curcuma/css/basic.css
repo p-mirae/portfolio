@@ -1,0 +1,50 @@
+/* ********** 共通のもの ********** */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Marcellus", "Shippori Mincho", serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    color: #333333;
+    letter-spacing: 0.1rem;
+    background-color: #fdfdfd;
+    counter-reset: count-number;
+}
+
+h2 {
+    font-size: clamp(0.875rem, 0.946rem + 0.89vw, 1.75rem);
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(0.875rem, 0.732rem + 0.71vw, 1.375rem);
+    text-align: center;
+}
+
+p {
+    font-size: clamp(0.75rem, 0.679rem + 0.36vw, 1rem);
+}
+
+/* 改行 */
+.lineBreak {
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+}
+
+/* コンテンツ幅 */
+.container {
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+/* アニメーション遅延 */
+:root {
+    --animate-duration: 1.2s;
+}
