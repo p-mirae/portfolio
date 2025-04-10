@@ -1,0 +1,1655 @@
+/* ----------------------------- 読み込みCSSファイル ----------------------------- */
+/* 木村工業について */
+@import url(about.css);
+
+/* 事業内容 */
+@import url(service.css);
+
+/* 設備紹介 */
+@import url(eqipment.css);
+
+/* 施工実績 */
+@import url(works.css);
+
+/* 会社案内 */
+@import url(company.css);
+
+/* 採用情報 */
+@import url(recruit.css);
+
+/* お問い合わせ */
+@import url(contact.css);
+
+/* ---------------------------------- 関数 ---------------------------------- */
+:root{
+    --fontColor: #222222;
+    --bgColor: #F7F6F2;
+    --corporateColor: #FFD800;
+    --lineColor: #cbcbcb;
+    --white: #fff;
+    --zenKakuGothic: "Zen Kaku Gothic Antique";
+    --Oswald: "Oswald";
+    --weightRegular: 400;
+    --weightMedium: 500;
+    --weightBold: 600;
+}
+
+/* ---------------------------------- 共通 ---------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Oswald", "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: var(--weightMedium);
+    font-style: normal;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    color: var(--fontColor);
+    letter-spacing: 0.04em;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+/* ----------------------------- コンテンツ幅 ----------------------------- */
+.container {
+    max-width: 1272px;
+    margin-inline: auto;
+    padding-inline: 1.2rem;
+}
+
+/* -------------------------------- 本文 -------------------------------- */
+.main_text {
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    font-weight: var(--weightMedium);
+    color: var(--fontColor);
+    line-height: 180%;
+    letter-spacing: 0.2;
+}
+
+/* ------------------------------- 見出し ------------------------------- */
+h3 .heading_top {
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+    font-weight: var(--weightBold);
+    padding-left: 0.3rem;
+}
+h3 .heading_bottom {
+    font-family: var(--Oswald);
+    font-size: clamp(3.5rem, 2.591rem + 4.55vw, 6rem);
+    font-weight: var(--weightBold);
+    letter-spacing: 0;
+}
+/* 色変え */
+h3 .text_deco {
+    color: var(--corporateColor);
+}
+
+/* -------------------------- 下層ページ小見出し -------------------------- */
+h4 .heading_top {
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+    font-weight: var(--weightBold);
+}
+h4 .heading_bottom {
+    font-family: var(--Oswald);
+    font-size: clamp(2.875rem, 2.284rem + 2.95vw, 4.5rem);
+    font-weight: var(--weightBold);
+    letter-spacing: 0;
+}
+h4 .text_deco {
+    color: var(--corporateColor);
+}
+
+/* ------------------------------- ボタン ------------------------------- */
+.button {
+    width: fit-content;
+    padding: 10px 12px 10px 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    border-radius: 9999px;
+    background-color: var(--white);
+    border: 1px solid var(--fontColor);
+    transition: all 0.3s ease;
+    font-family: var(--zenKakuGothic);
+    font-weight: var(--weightMedium);
+    font-size: clamp(0.813rem, 0.767rem + 0.23vw, 0.938rem);
+    overflow: hidden;
+}
+/* ホバーアニメーション */
+.button:hover {
+    background-color: var(--corporateColor);
+    border: 1px solid var(--corporateColor);
+}
+
+/* 矢印アイコンの黒い丸（固定） */
+.button .arrow {
+    width: 2.1rem;
+    height: 2.1rem;
+    background-color: var(--fontColor); /* 黒い背景 */
+    border-radius: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* はみ出し防止 */
+}
+
+/* 白い矢印（動かす要素） */
+.button .arrow .arrow_item_01 {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url(../images/arrow_right_white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+}
+/* ホバー時の矢印アニメーション */
+.button:hover .arrow .arrow_item_01 {
+    animation: arrow-slide 0.4s ease-in-out forwards;
+}
+
+/* 矢印が右に抜けて左から入るアニメーション */
+@keyframes arrow-slide {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    41% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ----------------------------- パンくずリスト ----------------------------- */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    font-family: var(--zenKakuGothic);
+    font-size: 12px;
+    margin: 48px auto 30px;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.breadcrumb li .boder {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background-color: black;
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #848484;
+}
+
+/* ------------------------------- アニメイトCSS ------------------------------- */
+.target,
+.targets {
+    opacity: 0;
+}
+.animate__fadeInLeft,
+.animate__fadeInUp {
+    opacity: 1;
+}
+@keyframes fadeInUpSmall {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 30%, 0);
+        transform: translate3d(0, 30%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+/* 挙動を小さく調整 */
+.fadeInUpSmall {
+    -webkit-animation-name: fadeInUpSmall;
+    animation-name: fadeInUpSmall;
+}
+.delay {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInLeftSmall {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-30%, 0, 0);
+        transform: translate3d(-30%, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+/* 挙動を小さく調整 */
+.fadeInLeftSmall {
+    -webkit-animation-name: fadeInLeftSmall;
+    animation-name: fadeInLeftSmall;
+}
+
+/* --------------------------------------------- ヘッダー --------------------------------------------- */
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-inline: 1rem;
+    top: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    color: var(--fontColor);
+}
+
+#home .header_wrapper {
+    color: var(--white);
+}
+
+/* 木村工業の文字 */
+.header_wrapper h1 {
+    font-family: "Noto Serif JP";
+    font-size: 24px;
+    position: fixed;
+    top: 12px;
+    z-index: 1000000;
+}
+
+.header_wrapper h1 a{
+    display: flex;
+    align-items: center;
+}
+
+/* ロゴ */
+.header_wrapper h1 .logo{
+    width: 48px;
+}
+
+.header_wrapper .logo_text{
+    mix-blend-mode:difference;
+}
+
+.header_wrapper #header_menu #menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--zenKakuGothic);
+    font-weight: var(--weightMedium);
+}
+
+.header_wrapper #header_menu #menu .menu_item,
+.header_wrapper #header_menu #menu .menu_contact {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color .3s;
+}
+/* ホバーアニメーション */
+.header_wrapper #header_menu #menu .menu_item:hover,
+.header_wrapper #header_menu #menu .menu_contact:hover{
+    color: var(--corporateColor);
+}
+
+/* お問い合わせCTA */
+.header_wrapper #header_menu #menu .menu_contact{
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid var(--fontColor);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .3s;
+    margin-left: 10px;
+}
+#home .header_wrapper #header_menu #menu .menu_contact {
+    border: 1px solid var(--white);
+}
+
+#home .header_wrapper #header_menu #menu .menu_contact:hover {
+    border: 1px solid transparent;
+}
+
+.header_wrapper #header_menu #menu .menu_contact:hover {
+    background-color: var(--corporateColor);
+    border: 1px solid var(--corporateColor);
+    color: var(--fontColor);
+}
+
+/* メインビジュアルを過ぎたら文字色変化する（JS) */
+#home .header_wrapper.headerColorScroll {
+    color: var(--fontColor);
+}
+#home .header_wrapper #header_menu #menu .menu_contact.headerColorScroll{
+    border: 1px solid var(--fontColor);
+}
+#home .header_wrapper #header_menu #menu .menu_contact.headerColorScroll:hover{
+    border: 1px solid var(--corporateColor);
+}
+
+/* --------------------------------------------- メイン --------------------------------------------- */
+/* ----------------------------- メインビジュアル ----------------------------- */
+#home .slider-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#home .slider-area {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#home .slider-wrapper .catchphrase{
+    width: 560px;
+    position: absolute;
+    left: 3%;
+    bottom: 34%;
+    z-index: 20;
+}
+
+#home .slider-wrapper .catchphrase .catchphrase_top {
+    opacity: 0;
+    padding-bottom: 1rem;
+    max-width: 400px;
+    animation: SlideIn 1s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards; /*これで値を保持*/
+    width: clamp(9rem, 2.955rem + 30.23vw, 25.625rem);
+}
+
+#home .slider-wrapper .catchphrase .catchphrase_bottom {
+    opacity: 0;
+    animation: SlideIn 1s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards; /*これで値を保持*/
+    width: clamp(12.5rem, 4.318rem + 40.91vw, 35rem);
+}
+
+/* キャッチコピーアニメーション */
+@keyframes SlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(64px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#home .slider-item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: 0;
+    animation: sliderAnime 24s 0s infinite;
+}
+/* キャッチコピー１行目 */
+#home .slider-item:nth-child(2) {
+    animation-delay: 8s;
+}
+/* キャッチコピー２行目 */
+#home .slider-item:nth-child(3) {
+    animation-delay: 16s;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* スライダー切り替わりアニメーション */
+@keyframes sliderAnime {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+        transform: scale(1.1);
+        z-index: 10;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+/* ----------------------------- 木村工業について ----------------------------- */
+#home #top_about {
+    margin-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ロゴ */
+#home #top_about .top_logo_mask {
+    flex-basis: 46%;
+}
+
+#home #top_about .text_contents {
+    flex-basis: 46%;
+}
+
+#home #top_about .text_contents .slogan {
+    padding-top: 2rem;
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(1.25rem, 1.023rem + 1.14vw, 1.875rem);
+    font-weight: var(--weightBold);
+    letter-spacing: 0.15rem;
+}
+
+#home #top_about .text_contents .main_text {
+    padding: 32px 0 50px;
+}
+
+/* ----------------------------- 事業内容 ----------------------------- */
+#home #top_service {
+    margin-top: 200px;
+}
+
+#home #top_service .text_contents,
+#home #top_company .text_contents {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+#home #top_service .text_contents .main_text {
+    margin-top: 1rem;
+}
+
+#home #top_service .service_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(1rem / 3);
+    flex-wrap: wrap;
+}
+
+#home #top_service .service_wrapper .service_box{
+    flex-basis: calc((100% / 3) - (1rem / 3));
+    position: relative;
+}
+
+#home #top_service .service_wrapper .service_box .service_item{
+    display: block;
+    position: relative;
+}
+
+/* ホバー前の画像 */
+#home #top_service .service_wrapper .service_box .service_item .service_item_before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity .3s;
+}
+/* ホバー後の画像 */
+#home #top_service .service_wrapper .service_box .service_item .service_item_after {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+/* ホバーアニメーション */
+#home #top_service .service_wrapper .service_box .service_item .service_item_before.itemHover {
+    opacity: 0;
+}
+#home #top_service .service_wrapper .service_box .service_item .service_item_after.itemHover {
+    opacity: 1;
+}
+
+/* -------------------------------- 施工事例 -------------------------------- */
+#top_works{
+    margin-top: 180px;
+}
+
+#top_works .swiperContainer {
+    position: relative;
+}
+
+/* スライダー */
+#top_works .swiper {
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 0;
+    position: relative;
+    padding-bottom: 60px;
+    overflow: visible;
+}
+
+/* 各スライド要素 */
+#top_works .swiper-slide {
+    position: relative;
+    overflow: hidden; /* 画像の拡大が飛び出さないように */
+    flex-direction: column;
+}
+
+#top_works .swiper-slide .works_img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top_works .swiper-slide .works_img img {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ホバーすると拡大する */
+#top_works .swiper-slide .swiper_item:hover img {
+    transform: scale(1.1); 
+}
+
+/* タグ */
+#top_works .swiper-slide .works_tag {
+    display: inline-block;
+    max-width: fit-content;
+    margin: 20px auto 16px;
+    font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
+    border: 1px solid var(--fontColor);
+    border-radius: 100px;
+    padding: 6px 18px;
+}
+
+/* 施工名 */
+#top_works .swiper-slide .works_name{
+    display: block;
+    font-family: var(--zenKakuGothic);
+}
+
+/* ボタン */
+#top_works .button{
+    margin-top: 60px;
+    margin-left: auto;
+}
+
+/* -------------------------------- 会社案内 -------------------------------- */
+#home #top_company{
+    margin-top: 180px;
+}
+
+#home #top_company .text_heading{
+    margin-bottom: 40px;
+}
+
+#home #top_company .text_contents .main_text {
+    padding-bottom: 1rem;
+}
+
+/* リストの基本レイアウト */
+#home #top_company .company_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(6rem / 3);
+}
+
+/* 横並び */
+#home #top_company .company_item {
+    font-family: var(--zenKakuGothic);
+    flex-basis: calc((100% / 3) - (6rem / 3));
+    position: relative;
+    padding: 20px 1rem 30px 1rem;
+    border-bottom: 1.5px solid var(--lineColor); /* グレーの下線 */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#home #top_company .company_item:nth-last-of-type(1){
+    border-bottom: none;
+    cursor: auto;
+}
+
+#home #top_company .company_item a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* テキストと矢印 */
+#home #top_company .company_item_text {
+    position: relative;
+    display: inline-block;
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+} 
+
+#home #top_company .arrow_right {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.4rem;
+    background-image: url(../images/arrow_right_black.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* 下線のアニメーション */
+#home #top_company .company_item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--fontColor);
+    transition: width 0.25s ease;
+}
+
+/* ホバー時の挙動 */
+#home #top_company .company_item:not(:nth-last-of-type(1)):hover::after {
+    width: 100%;
+}
+
+#home #top_company .company_item:hover .arrow_right {
+    transform: translateX(10px); /* 矢印が右へ */
+}
+
+/* -------------------------------- 採用情報 -------------------------------- */
+#top_recruit {
+    margin-block: 80px;
+}
+
+#top_recruit .recruit_cta {
+    border: 1px solid var(--fontColor);
+}
+
+#top_recruit .recruit_cta .recruit_link {
+    display: block;
+    padding: 3.7rem 2.9rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+#top_recruit .recruit_cta .recruit_link:hover {
+    background-color: var(--corporateColor);
+}
+#top_recruit .recruit_cta .recruit_link:hover {
+    & .text_deco {
+        color: var(--fontColor);
+    }
+}
+
+#top_recruit .recruit_cta .recruit_link .recruit_text_box .main_text {
+    margin-top: 20px;
+}
+
+/* 矢印アイコンの丸（固定） */
+#top_recruit .recruit_cta .recruit_link .arrow {
+    flex-shrink: 0; 
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: 1px solid var(--fontColor);
+    border-radius: 9999px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* はみ出し防止 */
+}
+
+/* 白い矢印（動かす要素） */
+#top_recruit .recruit_cta .recruit_link .arrow .arrow_item_01 {
+    width: 44px;
+    height: 30px;
+    background-image: url(../images/arrow_right_black.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+}
+/* ホバー時の矢印アニメーション */
+.recruit_link:hover .arrow .arrow_item_01 {
+    animation: recruit-arrow-slide 0.4s ease-in-out forwards;
+}
+
+/* 矢印が右に抜けて左から入るアニメーション */
+@keyframes recruit-arrow-slide {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    41% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* -------------------------------- パララックス -------------------------------- */
+.parallax {
+    height: 80vh;
+    background-image: url(../images/parallax.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* --------------------------------------------- フッター --------------------------------------------- */
+#footer {
+    background-color: var(--fontColor);
+    color: var(--white);
+}
+
+/* ----------------------------- コンタクトボタン ----------------------------- */
+#footer .contact_link {
+    padding-top: 120px;
+    display: inline-block;
+}
+
+#footer .contact_link .contact_item {
+    position: relative;
+    padding: 20px 0 1rem 0;
+    border-bottom: 1.5px solid #686868; /* グレーの下線 */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#footer .contact_link .contact_item a {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+#footer .contact_link .contact_item .contact_item_text {
+    font-size: clamp(2.75rem, 1.568rem + 5.91vw, 6rem);
+    font-weight: var(--weightMedium);
+    position: relative;
+    display: inline-block;
+}
+
+#footer .contact_link .contact_item .arrow_right {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../images/fotter_contact_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 10px;
+    background-position: center center;
+    transition: transform 0.3s ease;
+}
+
+/* 下線のアニメーション */
+#footer .contact_item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--white);
+    transition: width 0.25s ease;
+}
+
+#footer .contact_item:hover::after {
+    width: 100%;
+}
+
+#footer .contact_item:hover .arrow_right {
+    transform: translateX(10px); /* ホバー時に右へ移動 */
+}
+
+/* ----------------------------- フッターメニュー ----------------------------- */
+#footer .footer_wrapper {
+    font-family: var(--zenKakuGothic);
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #686868;
+}
+
+/* メニュー部分 */
+#footer .footer_wrapper .menu_wrapper {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+/* メニュー一列分 */
+#footer .footer_wrapper .menu_wrapper .menu_container {
+    flex-basis: calc(100% / 3);
+}
+
+/* アクセス部分 */
+#footer .footer_wrapper .acces_wrapper {
+    flex-basis: 30%;
+}
+
+#footer .footer_wrapper .menu_wrapper .menu_container .menu_item,
+#footer .footer_wrapper .acces_wrapper .acces_container .acces_item {
+    padding-top: 40px;
+}
+
+#footer .footer_wrapper .menu_wrapper .menu_container .menu_item .text_heading,
+#footer .footer_wrapper .acces_wrapper .acces_container .acces_item .text_heading {
+    font-size: 1rem;
+    padding-block: 5px;
+}
+
+#footer .footer_wrapper .menu_wrapper .menu_container .menu_item .text_bottom,
+#footer .footer_wrapper .acces_wrapper .acces_container .acces_item .text_bottom {
+    color: #B8B8B8;
+    font-weight: var(--weightRegular);
+    padding-block: 5px;
+}
+
+#footer .footer_wrapper .acces_wrapper .acces_container .acces_item {
+    font-family: "Zen Kaku Gothic Antique";
+}
+
+/* リスト線 */
+#footer .footer_wrapper .menu_wrapper .menu_container .menu_item .text_bottom {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#footer .footer_wrapper .menu_wrapper .menu_container .menu_item .text_bottom::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 1px;
+    background-color: var(--lineColor);
+}
+
+/* ----------------------------- フッターロゴとコピーライト ----------------------------- */
+#footer .copy {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -------------------------------- フッターロゴ -------------------------------- */
+/* 木村工業の文字 */
+#footer .fotter_logo {
+    font-family: "Noto Serif JP";
+    font-size: 30px;
+}
+
+#footer .fotter_logo a{
+    display: flex;
+    align-items: center;
+}
+#footer .fotter_logo .logo{
+    width: 60px;
+}
+
+#footer .fotter_logo .logo_text{
+    mix-blend-mode:difference;
+}
+
+#footer .copy > p{
+    font-family: "Zen Kaku Gothic Antique";
+    font-size: 14px;
+    color: #B8B8B8;
+}
+
+/* --------------------------------------------- レスポンシブ --------------------------------------------- */
+/* ///////////////////// max-width: 1160px ///////////////////// */
+@media screen and (max-width: 1160px) {
+    /* --------------- ドロワーメニュー --------------- */
+    header #drawerButton {
+        position: fixed;
+        top: 22px;
+        right: 1.2rem;
+        width: 40px;
+        height: 40px;
+        display: block;
+        z-index: 1000000;
+    }
+    /* 線 */
+    #drawerButton span {
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: var(--fontColor);
+        position: absolute;
+        transition: all 0.3s linear;
+    }
+
+    /* トップページだけハンバーガー３本線白色に */
+    #home #drawerButton span {
+        background-color: var(--white);
+    }
+    #home #drawerButton span.headerColorScroll {
+        background-color: var(--fontColor);
+    }
+    #drawerButton span:nth-child(1) {
+        top: 8px;
+    }
+    #drawerButton span:nth-child(2) {
+        width: 72%;
+        top: 19px;
+        right: 0;
+    }
+    #drawerButton span:nth-child(3) {
+        bottom: 8px;
+    }
+    /* JSで「.close」がついた時 */
+    #home #drawerButton.close span,
+    #drawerButton.close span{
+        background-color: var(--corporateColor);
+    }
+    #drawerButton.close span:nth-child(1) {
+        transform: rotate(-45deg);
+        top: 18px;
+    }
+    #drawerButton.close span:nth-child(2) {
+        transform: scale(0);
+    }
+    #drawerButton.close span:nth-child(3) {
+        transform: rotate(45deg);
+        top: 18px;
+    }
+    /* --------------- ドロワーメニュー開い時のメニュー --------------- */
+    .header_wrapper #header_menu #menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--fontColor);
+        visibility: hidden;
+        opacity: 0;
+        transition: all .6s;
+        z-index: 900;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: var(--white);
+        overflow: auto;
+    }
+    .header_wrapper #header_menu #menu .menu_item{
+        padding-block: 40px;
+    }
+    .header_wrapper #header_menu #menu li:nth-child(1) {
+        margin-top: 140px;
+    }
+    .header_wrapper #header_menu #menu .menu_item {
+        text-align: center;
+        border-bottom: 1px solid #5B5B5B;
+    }
+    .header_wrapper .logo_wrapper.white{
+        color: var(--white);
+        transition: all .6s;
+    }
+    .header_wrapper #header_menu #menu.open {
+        visibility: visible;
+        opacity: 1;
+    }
+    #drawerButton span.open {
+        background-color: var(--white);
+    }
+    #menu li:nth-child(3) {
+        padding-left: 0;
+    }
+    .header_wrapper #header_menu #menu .menu_item,
+    .header_wrapper #header_menu #menu .menu_contact {
+        width: 80%;
+    }
+    /* お問い合わせCTA */
+    .header_wrapper #header_menu #menu .menu_contact{
+        padding: 40px;
+        border: none;
+        background-color: transparent;
+        text-align: center;
+        margin-left: 0;
+    }
+    #home .header_wrapper #header_menu #menu .menu_contact {
+        border: transparent
+    }
+    .header_wrapper #header_menu #menu .menu_contact:hover,
+    .header_wrapper #header_menu #menu .menu_contact.headerColorScroll:hover {
+        background-color: transparent;
+        border: transparent;
+        color: var(--corporateColor);
+        border-color: transparent;
+    }
+    #home .header_wrapper #header_menu #menu .menu_contact.headerColorScroll:hover{
+        border: 1px solid transparent;
+    }
+}
+/* //////////////////////////// max-width: 860px //////////////////////////// */
+@media screen and (max-width: 860px) {
+    /* --------------- トップ　会社案内 --------------- */
+    #home #top_company .company_item {
+        padding: 20px 1rem 20px 1rem;
+    }
+    #footer .footer_wrapper {
+        margin: 10px auto 0;
+    }
+    /* --------------- トップ　フッター --------------- */
+    /* フッター問い合わせ */
+    #footer .contact_link {
+        padding-top: 60px;
+        display: inline-block;
+    }
+    /* メニュー部分消す */
+    #footer .footer_wrapper .menu_wrapper {
+        display: none;
+    }
+    /* アクセス部分 */
+    #footer .footer_wrapper .acces_wrapper {
+        flex-basis: 100%;
+    }
+    #footer .footer_wrapper .acces_wrapper .acces_container .acces_item {
+        padding-top: 56px;
+    }
+    #footer .footer_wrapper .acces_wrapper .acces_container .acces_item:last-child {
+        margin-bottom: 56px;
+    }
+    /* --------------- 木村工業について　大切にしていること --------------- */
+    #about #valuable .valuable_container .valuable_item .valuable_icon {
+        max-width: 180px;
+    }
+    /* --------------- 事業内容　制作の流れ --------------- */
+    #service #flow .flow_wrapper {
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
+    /* スマホ版の時は背景消えて下線と三角で区切る */
+    #service #flow .flow_wrapper .flow_container {
+        width: 100%;
+        height: auto;
+        border-top: 1px solid rgb(127, 127, 127);
+    }
+    #service #flow .flow_wrapper .flow_container:last-child {
+        border-bottom: 1px solid rgb(127, 127, 127);
+    }
+    /* ２つ目以降から三角足す */
+    #service #flow .flow_wrapper .flow_container .triangle {
+        content: "";
+        display: block;
+        width: 24px;
+        border: solid 1em transparent;
+        border-top-color: rgb(127, 127, 127);
+        margin: 0 auto;
+    }
+    #service #flow .flow_wrapper .flow_container .none {
+        display: none;
+    }
+    /* PCのビード背景消す */
+    #service #flow .flow_wrapper .flow_container:first-child,
+    #service #flow .flow_wrapper .flow_container,
+    #service #flow .flow_wrapper .flow_container:last-child{
+        background-image: none;
+    }
+    #service #flow .flow_wrapper .flow_container .step_number:first-child {
+        margin: 32px auto 10px;
+    }
+    #service #flow .flow_wrapper .flow_container .step_number {
+        margin: 4px auto 10px;
+    }
+    #service #flow .flow_wrapper .flow_container .flow_title {
+        margin-bottom: 10px;
+    }
+    #service #flow .flow_wrapper .flow_container .main_text {
+        margin-bottom: 32px;
+    }
+    /* ----------------------- 設備紹介 ----------------------- */
+    #epuipment #factory .midle_heading,
+    #epuipment .under_wrapper .midle_heading {
+        text-align: left;
+    }
+    /* 工場設備 */
+    #epuipment #factory .table_wrapper {
+        flex-direction: column;
+        gap: 0;
+    }
+    #epuipment #factory .table_wrapper #factory_01,
+    #epuipment #factory .table_wrapper #factory_02 {
+        width: 80%;
+    }
+    #epuipment #factory #factory_02 .heading_line {
+        display: none;
+    }
+    #epuipment .under_wrapper {
+        flex-direction: column;
+        gap: 200px;
+    }
+    /* 現場工事道工具・車両 */
+    #epuipment #tools,
+    #epuipment #Vehicle {
+        width: 61%;
+    }
+    /* ----------------------- 実績紹介 ----------------------- */
+    #works .works_list .works_tag_wrapper .c-searchButton {
+        width: 180px;
+    }
+    #works .works_list .p-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ----------------------- 会社案内 ----------------------- */
+    /* 挨拶文 */
+    #company #company_greeting .greeting_wrapper .greeting_text .main_text:nth-of-type(3) {
+        padding: 0;
+    }
+    #company #company_greeting .greeting_wrapper .greeting_text .president {
+        margin-top: 32px;
+    }
+}
+/* //////////////////////////// max-width: 710px //////////////////////////// */
+@media screen and (max-width: 710px) {
+    #contact #contact_guidance .guidance_wrapper {
+        padding: 40px 30px 36px 30px;
+    }
+    #contact #contact_guidance .contact_address {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* //////////////////////////// max-width: 680px //////////////////////////// */
+@media screen and (max-width: 680px) {
+    /* ------------------ ボタン ------------------ */
+    .button {
+        padding: 9px 10px 9px 24px;
+    }
+    /* 矢印アイコンの黒い丸（固定） */
+    .button .arrow {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    /* --------------- コンテンツ間の余白 --------------- */
+    #home #top_service,
+    #top_works,
+    #home #top_company{
+        margin-top: 120px;
+    }
+    /* パンくずリスト */
+    .breadcrumb {
+        margin-bottom: 10px;
+    }
+    /* 下層ページ */
+    #about,
+    #service,
+    #epuipment,
+    #works,
+    .works_under,
+    #company,
+    #recruit,
+    #contact{
+        margin-top: 120px;
+    }
+    /* 下層ページ　ヘッダー画像とコンテンツの余白 */
+    #about .heading_img,
+    #service .heading_img,
+    #epuipment .heading_img,
+    #works .heading_img,
+    #company .heading_img,
+    #recruit .heading_img {
+        margin-bottom: 80px;
+    }
+    .heading_img  img {
+        height: 240px;
+        object-fit: cover;
+    }
+    /* 下層ページ　中のコンテンツごとの余白 */
+    #about #valuable {
+        margin: 180px auto 180px;
+    }
+    #epuipment .under_wrapper {
+        gap: 140px;
+    }
+    /* --------------- トップ　木村工業について --------------- */
+    #home #top_about {
+        margin-top: 64px;
+        flex-direction: column;
+        gap: 42px;
+    }
+    /* ロゴ */
+    #home #top_about .top_logo_mask {
+        width: 72%;
+    }
+    #home #top_about .text_contents .main_text {
+        padding: 32px 0 40px;
+    }
+    /* ------------------ トップ　事業内容 ------------------ */
+    #home #top_service .text_contents,
+    #home #top_company .text_contents {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding-bottom: 2rem;
+    }
+    #home #top_service .text_contents .main_text {
+        margin-top: 0;
+    }
+    #home #top_service .service_wrapper .service_box{
+        flex-basis: 48%;
+    }
+    /* ボタン */
+    #home #top_service .button{
+        margin-top: 40px;
+        margin-left: 0;
+    }
+    /* ボタン */
+    #top_works .button{
+        margin-top: 50px;
+        margin-left: 0;
+    }
+
+    /* ------------------ トップ　会社案内 ------------------ */
+    #home #top_company .text_heading{
+        margin-bottom: 0;
+    }
+    #home #top_company .text_contents .main_text {
+        padding-bottom: 0;
+    }
+    /* リストの基本レイアウト */
+    #home #top_company .company_list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(3rem / 3);
+        justify-content: space-between;
+    }
+    /* 横並び */
+    #home #top_company .company_item {
+        flex-basis: 46%;
+        padding: 20px 1rem 20px 1rem;
+    }
+    /* --------------- トップ　採用情報　CTA --------------- */
+    #top_recruit {
+        margin-block: 62px;
+    }
+    #top_recruit .recruit_cta .recruit_text_box .main_text {
+        display: none;
+    }
+    #top_recruit .recruit_cta .recruit_link {
+        padding: 2.2rem 1.2rem;
+    }
+    /* 矢印アイコンの丸（固定） */
+    #top_recruit .recruit_cta .recruit_link .arrow {
+        width: 80px;
+        height: 80px;
+    }
+    /* ---------------------- トップ　フッター ------------------- */
+    /* フッターのロゴサイズ */
+    #footer .fotter_logo .logo{
+        width: 48px;
+    }
+    #footer .fotter_logo .logo_text{
+        font-size: 20px;
+    }
+    /* --------------- 木村工業について　選ばれる理由 --------------- */
+    /* 縦並びに */
+    #about #about_choose .choose_wrapper .choose_container,
+    #about #about_choose .choose_wrapper .choose_container:nth-of-type(2) {
+        flex-direction: column;
+    }
+    /* 写真サイズ */
+    #about #about_choose .choose_wrapper .choose_container .choose_img{
+        width: 90%;
+    }
+    /* 改行無くす */
+    #about #about_choose .choose_wrapper .choose_container .choose_text .heading .none {
+        display: none;
+    }
+    #about #about_choose .choose_wrapper .choose_container .choose_text .heading {
+        margin: 40px auto 24px;
+    }
+    /* 数字あしらい消す */
+    #about #about_choose .choose_wrapper .choose_container .choose_text::after,
+    #about #about_choose .choose_wrapper .choose_container:nth-of-type(2) .choose_text::after {
+        display: none;
+    }
+    #about #about_choose .choose_wrapper .choose_container:nth-of-type(2) {
+        margin-block: 120px;
+    }
+    /* ボタン */
+    #about #about_choose .choose_wrapper .choose_container .choose_text .button {
+        margin: 40px 0 0 0;
+    }
+    /* --------------- 木村工業について　大切にしていること --------------- */
+    #about #about_choose .midle_heading {
+        margin-bottom: 20px;
+    }
+    #about #valuable .valuable_container {
+        margin-top: 40px;
+    }
+    #about #valuable .valuable_container {
+        flex-direction: column;
+        gap: 72px;
+    }
+    /* --------------- 事業内容　事業内容 --------------- */
+    #service .servise_wrapper .service_container:not(:nth-of-type(1)) {
+        margin-top: 120px;
+    }
+    /* --------------- 設備紹介　小見出し文字下余白 --------------- */
+    #epuipment #factory .midle_heading,
+    #epuipment .under_wrapper .midle_heading  {
+        margin-bottom: 20px;
+    }
+    /* ----------------------- 施工事例 一覧 ----------------------- */
+    #works .works_list .works_tag_wrapper .p-search {
+        justify-content: flex-start;
+    }
+    #works .works_list .works_tag_wrapper .p-search .p-search__item:nth-child(1) .c-searchButton  {
+        margin-right: 300px;
+    }
+    #works .works_list .works_tag_wrapper .p-search .p-search__item_inner {
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+    }
+    /* タグボタン */
+    #works .works_list .works_tag_wrapper .c-searchButton {
+        padding: 6px 20px;
+    }
+    /* ----------------------- 会社案内 ----------------------- */
+    #company #company_greeting .midle_heading {
+        margin-bottom: 20px;
+    }
+    #company #company_greeting .greeting_wrapper {
+        flex-direction: column-reverse;
+    }
+    #company #company_greeting .greeting_wrapper .greeting_text .heading {
+        margin: 40px auto 24px;
+    }
+    #company #company_greeting .greeting_wrapper .greeting_img {
+        width: 100%;
+    }
+    /* 写真を横長に */
+    #company #company_greeting .greeting_wrapper .greeting_img img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: 0 -100px;
+    }
+    /* 会社概要　テーブル */
+    #company #company_outlune .outline_table {
+        margin-top: 20px;
+    }
+    /* ----------------------- お問い合わせ ----------------------- */
+    #contact #form {
+        margin-top: 60px;
+    }
+}
+
+/* //////////////////////////// max-width: 580px //////////////////////////// */
+@media screen and (max-width: 580px) {
+    /* ----------------------- 施工事例　詳細 ----------------------- */
+    .works_under .works_under_contents .works_title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    /* 施工事例のタグ */
+    .works_under .works_under_contents .works_title .works_title_tag {
+        padding: 4px 18px;
+    }
+    .works_under_contents .slider {
+        margin-top: 1rem;
+    }
+    .works_under_contents .thumbnail {
+        margin-top: 8px;
+    }
+}
+
+/* //////////////////////////// max-width: 500px //////////////////////////// */
+@media screen and (max-width: 500px) {
+    /* ----------- スマホ表示で横スクロール防止 ----------- */
+    HTML,
+    body {
+        overflow-x: hidden;
+    }
+    /* ----------- 設備紹介　テーブルタグ横幅　100% ----------- */
+    #epuipment #factory .table_wrapper #factory_01,
+    #epuipment #factory .table_wrapper #factory_02,
+    #epuipment #tools,
+    #epuipment #Vehicle {
+        width: 100%;
+    }
+    /* ------------------- フッター ------------------- */
+    #footer .contact_link .contact_item .arrow_right {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    /* ------------------- 施工事例　一覧 ------------------- */
+    #works .works_list {
+        margin-bottom: 40px;
+    }
+    #works .works_list .p-cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
+        margin-bottom: 80px;
+    }
+    /* ------------------- 施工事例　詳細 ------------------- */
+    .works_under .breadcrumb {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .works_under .works_under_contents {
+        margin: 50px auto 40px;
+    }
+    .works_under .works_under_contents .works_title {
+        margin: 32px auto 0;
+    }
+
+    .works_under .works_under_contents .works_under_heading_img {
+        margin: 24px auto 10px;
+    }
+    .works_under .works_under_contents .works_under_table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    .works_under .works_under_contents .works_under_table th,
+    .works_under .works_under_contents .works_under_table td {
+        width: 100%;
+    }
+    .works_under .works_under_contents .works_under_table th {
+        padding: 24px 1rem 0;
+    }
+    .works_under .works_under_contents .works_under_table td {
+        padding: 10px 1rem 24px ;
+    }
+    .works_under .works_under_contents .works_under_table .works_under_img_wrapper {
+        flex-direction: column;
+    }
+    .works_under .works_under_contents .works_under_table .works_under_img_wrapper .works_under_img{
+        width: 100%;
+    }
+    /*  ボタン */
+    .works_under .button {
+        padding: 9px 24px 9px 10px;
+        margin-top: 80px;
+    }
+    /* 矢印アイコンの黒い丸（固定） */
+    .works_under .button .arrow {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    /* ------------------------ 会社案内 ------------------------ */
+    /* 会社理念　背景　ロゴ */
+    #company #company_philosophy {
+        background-size: 380px;
+    }
+    /* 会社概要　テーブル */
+    #company #company_outlune .outline_table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    #company #company_outlune .outline_table tr th {
+        width: 100%;
+        padding: 24px 1rem 0;
+    }
+    #company #company_outlune .outline_table tr td {
+        width: 100%;
+        padding: 10px 1rem 24px ;
+    }
+    #company #company_outlune .outline_table td .address_top {
+        margin-bottom: 24px;
+    }
+    /* 会社写真 */
+    #company #company_outlune .company_img_wrapper {
+        flex-direction: column;
+        gap: 60px;
+    }
+    /* アクセス */
+    #company #company_access {
+        margin-top: 120px;
+    }
+    #company #company_access .access_wrapper {
+        flex-direction: column;
+        gap: 60px;
+    }
+    /* ------------------------ 採用情報 ------------------------ */
+    #recruit #requirements .midle_heading {
+        margin-bottom: 20px;
+    }
+    /* 会社概要　テーブル */
+    #recruit #requirements .requirements_table tr {
+        display: flex;
+        flex-direction: column;
+    }
+    #recruit #requirements .requirements_table th {
+        width: 100%;
+        padding: 24px 1rem 0;
+    }
+    #recruit #requirements .requirements_table td {
+        width: 100%;
+        padding: 10px 1rem 24px ;
+    }
+    #recruit #requirements .requirements_table td .text:nth-child(2) {
+        margin-top: 24px;
+    }
+    /* ------------------------ お問い合わせ ------------------------ */
+    #contact #form form .checkbox {
+        margin: 40px auto 40px;
+    }
+}
+/* //////////////////////////// max-width: 420px //////////////////////////// */
+@media screen and (max-width: 420px) {
+    #home .slider-wrapper .catchphrase{
+        width: clamp(16.25rem, 8.659rem + 37.95vw, 37.125rem);
+        position: absolute;
+        left: 3%;
+        bottom: 40%;
+        z-index: 20;
+    }
+    /* ----------- トップ　ヘッダー　ロゴサイズ ----------- */
+    /* 木村工業の文字 */
+    .header_wrapper h1 {
+        font-size: 20px;
+    }
+    .header_wrapper h1 .logo{
+        width: 42px;
+    }
+
+    header #drawerButton {
+        top: 16px;
+        width: 40px;
+        height: 40px;
+    }
+    /* --------------- トップ　事業内容 --------------- */
+    /* リストの基本レイアウト */
+    #home #top_service .service_wrapper .service_box{
+        flex-basis: 100%;
+    }
+    /* --------------- トップ　会社案内 --------------- */
+    /* 横並び */
+    #home #top_company .company_item {
+        flex-basis: 100%;
+    }
+    /* 調整用消す */
+    #home #top_company .company_item:nth-last-of-type(1){
+        display: none;
+    }
+    /* --------------- トップ　採用情報　CTA --------------- */
+    /* 矢印アイコンの丸（固定） */
+    #top_recruit .recruit_cta .recruit_link .arrow {
+        width: 60px;
+        height: 60px;
+    }
+    #top_recruit .recruit_cta .recruit_link .arrow .arrow_item_01 {
+        width: 24px;
+        height: 16px;
+    }
+    /* --------------- トップ　フッター --------------- */
+    #footer .contact_link {
+        width: 100%;
+    }
+    #footer .contact_link .contact_item a {
+        gap: 0;
+    }
+    #footer .contact_link .arrow_right {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+    #footer .copy {
+        padding-top: 18px;
+        padding-bottom: 24px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #epuipment #factory .table_wrapper #factory_01 tr .heading,
+    #epuipment #factory .table_wrapper #factory_02 tr .heading,
+    #epuipment #tools .under_table tr .heading,
+    #epuipment #Vehicle .under_table tr .heading {
+        white-space: nowrap;
+    }
+    #works .works_list .works_tag_wrapper .p-search {
+        flex-direction: column;
+    }
+    /* 会社写真 */
+    #company #company_greeting .greeting_wrapper .greeting_img img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: 0 -60px;
+    }
+    /* ------------------- 施工事例　詳細 ------------------- */
+    .works_under_contents .thumbnail {
+        margin-top: 4px;
+    }
+}

@@ -1,0 +1,98 @@
+#about{
+    margin-top: 230px;
+}
+
+#about .heading_img{
+    margin-bottom: 120px;
+}
+
+/* ------------------------- 木村工業が選ばれる理由 ------------------------- */
+#about #about_choose .midle_heading {
+    margin-bottom: 40px;
+}
+
+#about #about_choose .choose_wrapper .choose_container {
+    font-family: var(--zenKakuGothic);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(100% - 48% - 48%);
+}
+
+/* 2つ目レイアウト逆に */
+#about #about_choose .choose_wrapper .choose_container:nth-of-type(2) {
+    flex-direction: row-reverse;
+    margin-block: 80px;
+}
+
+#about #about_choose .choose_wrapper .choose_container .choose_img{
+    flex-basis: 48%;
+}
+
+#about #about_choose .choose_wrapper .choose_container .choose_text {
+    flex-basis: 48%;
+    position: relative;
+}
+
+/* １つ目 */
+#about #about_choose .choose_wrapper .choose_container .choose_text::after {
+    content: "01";
+    color: var(--corporateColor);
+    font-family: var(--Oswald);
+    font-size: clamp(6.25rem, 3.977rem + 11.36vw, 12.5rem);
+    opacity: 0.2;
+    position: absolute;
+    top: -20%;
+    right: 0;
+}
+/* 2つ目 */
+#about #about_choose .choose_wrapper .choose_container:nth-of-type(2) .choose_text::after {
+    content: "02";
+    font-family: var(--Oswald);
+    top: -24%;
+}
+/* 3つ目 */
+#about #about_choose .choose_wrapper .choose_container:nth-of-type(3) .choose_text::after {
+    content: "03";
+    font-family: var(--Oswald);
+}
+
+#about #about_choose .choose_wrapper .choose_container .choose_text .heading {
+    font-size: clamp(1.125rem, 0.852rem + 1.36vw, 1.875rem);
+    font-weight: var(--weightBold);
+    line-height: 1.4;
+    margin-bottom: 64px;
+}
+
+#about #about_choose .choose_wrapper .choose_container .choose_text .button {
+    margin: 50px 0 0 auto;
+}
+
+/* --------------------- 大切にしていること --------------------- */
+#about #valuable {
+    margin: 200px auto 220px;
+}
+
+#about #valuable .valuable_container {
+    font-family: var(--zenKakuGothic);
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(3rem / 3);
+}
+
+#about #valuable .valuable_container .valuable_item {
+    flex-basis: calc((100% / 3) - (3rem / 3));
+    text-align: center;
+}
+
+#about #valuable .valuable_container .valuable_item .valuable_icon {
+    max-width: 220px;
+    margin-inline: auto;
+}
+
+#about #valuable .valuable_container .valuable_item .valuable_heading {
+    margin: 20px 0 16px;
+    font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+}

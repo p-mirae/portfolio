@@ -1,0 +1,146 @@
+#contact {
+    margin-top: 230px;
+}
+
+.contact_container {
+    max-width: 892px;
+    margin-inline: auto;
+    padding-inline: 1.2rem;
+}
+
+/* ----------------------------------- ご案内 ----------------------------------- */
+#contact #contact_guidance {
+    margin-top: 50px;
+}
+
+#contact #contact_guidance .guidance_wrapper {
+    padding: 60px 80px;
+    border: 1px solid var(--fontColor);
+}
+
+#contact #contact_guidance .guidance_text {
+    line-height: 180%;
+    margin-bottom: 30px;
+}
+
+#contact #contact_guidance .contact_address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact #contact_guidance .contact_address .address_item {
+    font-size: clamp(1.5rem, 1.136rem + 1.82vw, 2.5rem);
+    flex-basis: 50%;
+}
+
+#contact #contact_guidance .contact_address .address_item .text_deco {
+    color: var(--corporateColor);
+}
+
+/* ------------------------------- お問い合わせフォーム ------------------------------- */
+#contact #form {
+    margin-top: 100px;
+    font-family: "Zen Kaku Gothic Antique";
+}
+
+#contact #form form .iptext_wrapper {
+    padding: 32px 0 12px;
+}
+
+#contact #form form .required_tag {
+    background-color: var(--corporateColor);
+    padding: 2px 13px 3px;
+    border-radius: 9999px;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+/* テキストボックス */
+#contact #form form .text_box,
+#contact #form form textarea {
+    width: 100%;
+    background-color: var(--bgColor);
+    padding: 14px 16px;
+    box-sizing: border-box;
+}
+
+#contact #form form textarea {
+    height: 200px;
+}
+
+/* プライバシーポリシー */
+#contact #form form .privacy .privacy_text {
+    background-color: var(--bgColor);
+    padding: 14px 16px;
+    line-height: 160%;
+    height: 220px;
+    overflow: scroll;
+    font-size: clamp(0.813rem, 0.767rem + 0.23vw, 0.938rem);
+}
+
+/* フォーカス */
+.ef input[type='text']:focus,
+textarea:focus {
+    outline: var(--corporateColor) 1.5px solid;
+}
+
+/* 入力欄の例 */
+::placeholder {
+    color: rgb(173, 173, 173);
+}
+
+/* 確認チェックボックス */
+#contact #form form .checkbox {
+    border: none;
+    margin: 50px auto 60px;
+    line-height: 180%;
+}
+
+#contact #form form .checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 0 .5em;
+    position: relative;
+    margin-bottom: .5em;
+    cursor: pointer;
+}
+
+#contact #form form .checkbox label::before,
+#contact #form form .checkbox label:has(:checked)::after {
+    content: '';
+    text-align: center;
+}
+
+#contact #form form .checkbox label::before {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--fontColor);
+}
+
+#contact #form form .checkbox label:has(:checked)::before {
+    background-color: var(--corporateColor);
+    border: transparent;
+}
+
+#contact #form form .checkbox label:has(:checked)::after {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    transform: rotate(45deg);
+    width: 6px;
+    height: 9px;
+    border: solid var(--fontColor);
+    border-width: 0 2px 2px 0;
+}
+
+#contact #form form .checkbox input {
+    display: none;
+}
+
+/* 送信ボタン */
+#contact #form form .button {
+    margin-inline: auto;
+    padding: 12px 26px;
+}

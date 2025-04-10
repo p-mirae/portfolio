@@ -1,0 +1,116 @@
+#epuipment {
+    margin-top: 230px;
+}
+
+#epuipment .heading_img{
+    margin-bottom: 120px;
+}
+
+/* --------------------------- 工場設備 --------------------------- */
+#epuipment #factory .midle_heading{
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#epuipment #factory .table_wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+}
+
+#epuipment #factory .table_wrapper #factory_01,
+#epuipment #factory .table_wrapper #factory_02 {
+    width: 100%;
+}
+
+#epuipment #factory .table_wrapper #factory_01 tr,
+#epuipment #factory .table_wrapper #factory_02 tr,
+#epuipment #tools .under_table tr, 
+#epuipment #Vehicle .under_table tr {
+    border-bottom: 0.7px solid var(--fontColor);
+    font-family: "Zen Kaku Gothic Antique";
+    font-weight: var(--weightMedium);
+}
+
+#epuipment #factory .table_wrapper #factory_01 .heading_line,
+#epuipment #factory .table_wrapper #factory_02 .heading_line, 
+#epuipment #tools .under_table .heading_line,
+#epuipment #Vehicle .under_table .heading_line {
+    font-family: var(--zenKakuGothic);
+    border-bottom: 2px solid var(--corporateColor);
+}
+
+#epuipment #factory .table_wrapper #factory_01 tr .heading,
+#epuipment #factory .table_wrapper #factory_02 tr .heading,
+#epuipment #tools .under_table tr .heading,
+#epuipment #Vehicle .under_table tr .heading {
+    font-weight: var(--weightBold);
+}
+
+#epuipment #factory .table_wrapper #factory_01 th,
+#epuipment #factory .table_wrapper #factory_01 td,
+#epuipment #factory .table_wrapper #factory_02 th,
+#epuipment #factory .table_wrapper #factory_02 td {
+    width: 26%;
+    padding: 24px 1rem;
+    border: none;
+}
+
+#epuipment #factory .table_wrapper #factory_01 th,
+#epuipment #factory .table_wrapper #factory_02 th {
+    width: 48%;
+    font-weight: var(--weightMedium);
+}
+
+#epuipment #factory .table_wrapper #factory_01 td,
+#epuipment #factory .table_wrapper #factory_02 td,
+#epuipment #tools .under_table td,
+#epuipment #Vehicle .under_table td {
+    text-align: center;
+}
+
+/* --------------------- 現場工事道工具 / 車両 --------------------- */
+#epuipment .under_wrapper {
+    margin-top: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+#epuipment #tools,
+#epuipment #Vehicle {
+    width: 100%;
+}
+
+#epuipment #tools .under_table,
+#epuipment #Vehicle .under_table {
+    width: 100%;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+}
+
+#epuipment .under_wrapper .midle_heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#epuipment #tools .under_table th,
+#epuipment #tools .under_table td,
+#epuipment #Vehicle .under_table th,
+#epuipment #Vehicle .under_table td {
+    padding: 24px 1rem;
+    border: none;
+}
+
+#epuipment #tools .under_table th,
+#epuipment #Vehicle .under_table th {
+    font-weight: var(--weightMedium);
+    width: 60%;
+}
+
+#epuipment #tools .under_table td,
+#epuipment #Vehicle .under_table td {
+    width: 40%;
+}

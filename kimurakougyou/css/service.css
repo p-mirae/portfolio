@@ -1,0 +1,156 @@
+#service {
+    margin-top: 230px;
+}
+
+#service .heading_img{
+    margin-bottom: 120px;
+}
+
+/* ------------------------------ 事業内容 ------------------------------ */
+#service .servise_wrapper .service_container .service_title {
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(1.125rem, 0.898rem + 1.14vw, 1.75rem);
+    border-bottom: 1.5px solid var(--fontColor);
+    padding-bottom: 1rem;
+}
+
+#service .servise_wrapper .service_container .servie_img {
+    margin-top: 32px;
+}
+
+#service .servise_wrapper .main_text {
+    margin-block: 24px;
+}
+
+/* 施工事例 */
+#service .servise_wrapper .service_container:not(:nth-of-type(1)) {
+    margin-top: 160px;
+}
+
+#service .servise_wrapper .service_container .servise_example_wrapper {
+    background-color: var(--bgColor);
+    padding: 2rem 4.2rem;
+}
+
+#service .servise_wrapper .service_container .servise_example_wrapper .servise_example_container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem 1.3rem;
+    flex-wrap: wrap;
+}
+
+#service .servise_wrapper .service_container .servise_example_wrapper .servise_example_container .servise_example {
+    flex-basis: calc((100% / 4) - (1rem));
+    letter-spacing: 0.1rem;
+    padding-left: 16px;
+    position: relative;
+}
+#service .servise_wrapper .service_container .servise_example_wrapper .servise_example_container .servise_example:last-of-type {
+    align-self: center;
+}
+
+#service .servise_wrapper .service_container .servise_example_wrapper .servise_example_container .servise_example::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 1px;
+    left: 0;
+    background-color: var(--fontColor);
+}
+
+/* ------------------------------ 制作の流れ ------------------------------ */
+#service #flow {
+    margin-top: 140px;
+    background-image: url(../images/flow_bg.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+#service #flow .midle_heading {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+#service #flow .midle_heading .text_heading .heading_top {
+    color: var(--white);
+}
+
+#service #flow .midle_heading .text_heading .heading_bottom {
+    color: var(--white);
+    font-weight: var(--weightMedium);
+}
+
+#service #flow .flow_wrapper .flow_container .step_number {
+    color: var(--corporateColor);
+}
+
+#service #flow .flow_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+
+#service #flow .flow_wrapper .flow_container {
+    flex-basis: calc(100% / 5);
+    height: 360px;
+}
+
+#service #flow .flow_wrapper .flow_container {
+    background-image: url(../images/floe_center.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 20px 0 28px;
+}
+
+#service #flow .flow_wrapper .flow_container:first-child {
+    background-image: url(../images/flow_start.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 13px 0 22px;
+}
+
+#service #flow .flow_wrapper .flow_container:nth-of-type(2) .flow_title {
+    line-height: 1.4;
+}
+
+#service #flow .flow_wrapper .flow_container:last-child {
+    background-image: url(../images/flow_end.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+
+#service #flow .flow_wrapper .flow_container .step_number {
+    margin: 60px 0 20px;
+} 
+
+#service #flow .flow_wrapper .flow_container .step_number .step_number_heading {
+    font-size: clamp(0.625rem, 0.557rem + 0.34vw, 0.813rem);
+    margin-bottom: 4px;
+}
+
+#service #flow .flow_wrapper .flow_container .step_number .step_number_bottom {
+    font-size: clamp(1.25rem, 1.159rem + 0.45vw, 1.5rem);
+}
+
+#service #flow .flow_wrapper .flow_container .flow_title,
+#service #flow .flow_wrapper .flow_container .main_text {
+    color: var(--white);
+}
+
+#service #flow .flow_wrapper .flow_container .flow_title {
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    font-weight: var(--weightBold);
+    margin-bottom: 20px;
+    letter-spacing: 0.1rem;
+}
+
+#service #flow .flow_wrapper .flow_container .main_text {
+    font-weight: 400;
+}

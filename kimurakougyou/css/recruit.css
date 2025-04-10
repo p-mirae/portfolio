@@ -1,0 +1,44 @@
+#recruit {
+    margin-top: 230px;
+}
+
+#recruit .heading_img{
+    margin-bottom: 120px;
+}
+
+/* --------------------- 募集要項 --------------------- */
+#recruit #requirements .midle_heading {
+    margin-bottom: 40px;
+}
+
+/* テーブル */
+/* テーブル */
+#recruit #requirements .requirements_table {
+    width: 100%;
+    margin-inline: auto;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    line-height: 180%;
+}
+
+#recruit #requirements .requirements_table tr {
+    border-bottom: 0.5px solid var(--fontColor);
+    font-family: "Zen Kaku Gothic Antique";
+    font-weight: var(--weightMedium);
+}
+
+#recruit #requirements .requirements_table th,
+#recruit #requirements .requirements_table td {
+    padding: 30px 1rem;
+    border: none;
+}
+
+#recruit #requirements .requirements_table th {
+    width: 20%;
+}
+#recruit #requirements .requirements_table td {
+    width: 80%;
+}
+
+#recruit #requirements .requirements_table td .text:nth-child(2) {
+    margin-top: 48px;
+}

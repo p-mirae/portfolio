@@ -1,0 +1,227 @@
+#works,
+.works_under {
+    margin-top: 230px;
+}
+
+/* ----------------------------------- タグ ----------------------------------- */
+#works .works_list{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+#works .works_list .works_tag_wrapper .p-search {
+    font-family: var(--zenKakuGothic);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+#works .works_list .works_tag_wrapper .c-searchButton  {
+    width: 200px;
+    background-color: var(--white);
+    padding: 8px 30px;
+    border: 1px solid var(--fontColor);
+    border-radius: 9999px;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    transition: .4s;
+    text-align: center;
+}
+
+#works .works_list .works_tag_wrapper .c-searchButton:hover {
+    background: var(--corporateColor);
+    border: 1px solid transparent;
+}
+
+#works .works_list .works_tag_wrapper .c-searchButton.is-select {
+    background: var(--corporateColor);
+    border: 1px solid transparent;
+}
+
+/* ----------------------------------- 一覧 ----------------------------------- */
+#works .works_list .p-cards {
+    font-family: var(--zenKakuGothic);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 7.5rem;
+    margin-top: 40px;
+    margin-bottom: 120px;
+}
+
+#works .works_list .p-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+#works .works_list .p-card__img {
+    width: 100%;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#works .works_list .p-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 画像ホバーアニメーション */
+#works .works_list .p-card .p-card__img:hover img {
+    transform: scale(1.1); /* 拡大 */
+}
+
+#works .works_list .p-card___text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* タグ */
+#works .works_list .p-card___text .works_tag {
+    display: inline-block;
+    max-width: fit-content;
+    margin: 20px 0 16px;
+    font-size: clamp(0.75rem, 0.705rem + 0.23vw, 0.875rem);
+    border: 1px solid var(--fontColor);
+    border-radius: 100px;
+    padding: 6px 18px;
+}
+/* 施工名 */
+#works .works_list .p-card___text .works_name {
+    font-size: 1rem;
+}
+
+/* ページ番号 */
+#works .works_list .works_page_number {
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    background-color: var(--corporateColor);
+    margin-inline: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+#works .works_list .works_page_number a {
+    width: 100%;
+    padding: 2rem;
+}
+
+#works .works_list .works_page_number a::before {
+    content: "1";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------------------------------- 施工事例詳細 ----------------------------------- */
+.works_under .works_under_contents {
+    max-width: 1000px;
+    margin: 50px auto 80px;
+    padding-inline: 1.2rem;
+}
+
+.works_under .works_under_contents .works_title {
+    font-family: var(--zenKakuGothic);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* 施工事例のタグ */
+.works_under .works_under_contents .works_title .works_title_tag {
+    display: inline-block;
+    max-width: fit-content;
+    font-size: clamp(0.625rem, 0.489rem + 0.68vw, 1rem);
+    border: 1px solid var(--fontColor);
+    border-radius: 100px;
+    padding: 8px 30px;
+}
+
+/* 施工事例の名前 */
+.works_under .works_under_contents .works_title .works_title_name {
+    font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+}
+
+/* ------------------------------ 施工実績詳細サムネ付きスライダー ------------------------------ */
+.works_under_contents .works_under_slider {
+    width: 100%;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+.works_under_contents .slider {
+    margin-top: 24px;
+}
+
+.works_under_contents .thumbnail {
+    margin-top: 0.7rem;
+    cursor: pointer;
+}
+
+.works_under_contents .swiper-slide img {
+    width: 100%;
+}
+
+  /* サムネイルのスタイル */
+.works_under_contents .thumbnail .swiper-slide {
+    opacity: 0.5;
+}
+
+  /* サムネイルのアクティブスタイル */
+.works_under_contents .thumbnail .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+
+/* 一覧に戻るボタン */
+.works_under .button {
+    padding: 10px 26px 10px 12px;
+    margin-inline: auto;
+    flex-direction: row-reverse;
+    margin-top: 120px;
+}
+
+/* 白い矢印（動かす要素） */
+.works_under .button .arrow .arrow_item_01 {
+    background-image: url(../images/arrow_left_white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    transform: translateX(0);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* ホバー時の矢印アニメーション */
+.works_under .button:hover .arrow .arrow_item_01 {
+    animation: arrow-slide-left 0.4s ease-in-out forwards;
+}
+
+/* 矢印が右に抜けて左から入るアニメーション */
+@keyframes arrow-slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    40% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    41% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

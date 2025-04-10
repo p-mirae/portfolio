@@ -1,0 +1,171 @@
+#company {
+    margin-top: 230px;
+}
+
+#company .heading_img{
+    margin-bottom: 120px;
+}
+
+/* ------------------------------ ご挨拶 ------------------------------ */
+#company #company_greeting .greeting_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#company #company_greeting .greeting_wrapper .greeting_text {
+    font-family: var(--zenKakuGothic);
+    flex-basis: 60%;
+}
+#company #company_greeting .greeting_wrapper .greeting_text .heading {
+    font-size: clamp(1.125rem, 0.852rem + 1.36vw, 1.875rem);
+    font-weight: var(--weightBold);
+    margin: 40px auto 40px;
+}
+
+#company #company_greeting .greeting_wrapper .greeting_text .president {
+    margin-top: 80px;
+}
+
+#company #company_greeting .greeting_wrapper .greeting_text .president span {
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+    padding-left: 1rem;
+}
+
+#company #company_greeting .greeting_wrapper .greeting_text .main_text:nth-of-type(3) {
+    padding-block: 30px;
+}
+
+#company #company_greeting .greeting_wrapper .greeting_img {
+    flex-basis: 36%;
+}
+
+/* ------------------------------ 会社理念 ------------------------------ */
+#company #company_philosophy {
+    background-color: var(--corporateColor);
+    text-align: center;
+    margin-top: 120px;
+    position: relative;
+    background-image: url(../images/company_logo.png);
+    background-position: center center;
+    background-size: 480px;
+    background-repeat: no-repeat;
+}
+
+#company #company_philosophy .midle_heading {
+    padding: 220px 0 56px;
+}
+
+#company #company_philosophy .midle_heading .heading_top {
+    font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+    color: var(--fontColor);
+}
+
+#company #company_philosophy .midle_heading .heading_bottom {
+    font-size: clamp(1.5rem, 1.364rem + 0.68vw, 1.875rem);
+    font-weight: var(--weightMedium);
+}
+
+#company #company_philosophy .philosophy {
+    font-family: var(--zenKakuGothic);
+    font-size: clamp(1.5rem, 1.136rem + 1.82vw, 2.5rem);
+    padding-bottom: 220px;
+}
+
+/* ------------------------------ 会社概要 ------------------------------ */
+#company #company_outlune {
+    margin-top: 120px;
+}
+
+#company #company_outlune .outline_table {
+    margin-top: 40px;
+}
+
+/* テーブル */
+#company #company_outlune .outline_table {
+    width: 100%;
+    margin-inline: auto;
+    font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+    line-height: 180%;
+}
+
+#company #company_outlune .outline_table tr {
+    border-bottom: 0.5px solid var(--fontColor);
+    font-family: "Zen Kaku Gothic Antique";
+    font-weight: var(--weightMedium);
+}
+
+#company #company_outlune .outline_table th,
+#company #company_outlune .outline_table td {
+    padding: 30px 1rem;
+    border: none;
+}
+
+#company #company_outlune .outline_table th {
+    width: 20%;
+}
+#company #company_outlune .outline_table td {
+    width: 80%;
+}
+
+#company #company_outlune .outline_table td .address_top {
+    margin-bottom: 48px;
+}
+
+#company #company_outlune .outline_table td .top {
+    font-weight: var(--weightBold);
+}
+
+/* 写真 */
+#company #company_outlune .company_img_wrapper {
+    margin-top: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+#company #company_outlune .company_img_wrapper .company_01,
+#company #company_outlune .company_img_wrapper .company_02 {
+    flex-basis: calc((100% / 2) - 1.5rem);
+}
+
+#company #company_outlune .company_img_wrapper .main_text {
+    margin-top: 1rem;
+    font-weight: var(--weightBold);
+}
+
+/* ------------------------------ アクセス ------------------------------ */
+#company #company_access {
+    margin-top: 160px;
+}
+
+#company #company_access .access_wrapper {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+#company #company_access .access_wrapper .access_inner {
+    flex-basis: calc((100% / 2) - 1.5rem);
+}
+
+#company #company_access .access_wrapper .access_inner iframe {
+    width: 100%;
+    aspect-ratio: 3 / 2; 
+}
+
+
+#company #company_access .access_wrapper .access_inner .address {
+    font-family: "Zen Kaku Gothic Antique";
+}
+
+#company #company_access .access_wrapper .access_inner .address .top {
+    font-weight: var(--weightBold);
+    padding: 20px 0 10px;
+}
+
+#company #company_access .access_wrapper .access_inner .address .under {
+    line-height: 180%;
+}
